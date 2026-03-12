@@ -1,0 +1,371 @@
+/* ECTDAI Page Styles */
+
+/* Page Layout */
+.ectdai-page {
+  min-height: 100vh;
+  /* Remove blue gradient so hero image appears immediately on AI Drafting / ECTD AI pages */
+  background: none;
+  position: relative;
+}
+
+/* Hero Section */
+.ectdai-hero {
+  padding: 6rem 2rem 2rem;
+  text-align: center;
+  color: white;
+  background-image: url('/assets/AI Drafting Background_img.png');
+  background-size: cover;
+  background-position: center -50px;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 550px;
+}
+
+.ectdai-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/assets/AI Drafting Background_img.png');
+  background-size: cover;
+  background-position: center -50px;
+  background-repeat: no-repeat;
+  filter: none;
+  z-index: 0;
+}
+
+.ectdai-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.ectdai-hero-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.ectdai-hero-logo:hover {
+  transform: scale(1.05);
+}
+
+.ectdai-hero-logo img {
+  width: 180px;
+  height: auto;
+  display: block;
+}
+
+.ectdai-hero-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1e82c9;
+  margin: 0;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Content Container */
+.ectdai-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* Cards */
+.ectdai-card {
+  background: #f2f4f6;
+  border-radius: 18px;
+  padding: 35px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ectdai-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Card Header */
+.ectdai-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Icon Box */
+.ectdai-icon-box {
+  width: 48px;
+  height: 48px;
+  background: rgba(30, 130, 201, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ectdai-icon-box svg {
+  width: 24px;
+  height: 24px;
+  color: #1e82c9;
+}
+
+/* Card Titles */
+.ectdai-card-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* Body Text */
+.ectdai-card-body {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #4a5568;
+}
+
+.ectdai-card-body p {
+  margin-bottom: 1.5rem;
+}
+
+.ectdai-card-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Feature List */
+.ectdai-feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Feature Item */
+.ectdai-feature-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  /* flex-direction: column; */
+  /* text-align: center; */
+}
+
+
+/* Feature Icon */
+.ectdai-feature-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(30, 130, 201, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.ectdai-feature-icon svg {
+  width: 20px;
+  height: 20px;
+  color: #1e82c9;
+}
+
+/* Feature Content */
+.ectdai-feature-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Feature Text */
+.ectdai-feature-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.3;
+}
+
+.ectdai-feature-description {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #4a5568;
+  margin: 0;
+}
+
+/* Demo Button Wrapper */
+.ectdai-demo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+/* Button */
+.ectdai-demo-btn {
+  background: linear-gradient(135deg, #1e82c9, #2f9ad8);
+  color: white;
+  border: none;
+  border-radius: 40px;
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-family: inherit;
+  box-shadow: 0 8px 20px rgba(30,130,201,0.25);
+}
+
+.ectdai-demo-btn:hover {
+  background: linear-gradient(135deg, #1973b2, #288bc4);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(30,130,201,0.35);
+}
+
+.ectdai-demo-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 14px rgba(30,130,201,0.25);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ectdai-hero-title {
+    font-size: 32px;
+  }
+
+  .ectdai-hero-logo img {
+    width: 140px;
+  }
+
+  .ectdai-content {
+    padding: 2rem 1.5rem 3rem;
+    gap: 2rem;
+  }
+
+  .ectdai-card {
+    padding: 25px;
+    border-radius: 16px;
+  }
+
+  .ectdai-card-header {
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .ectdai-card-title {
+    font-size: 24px;
+  }
+
+  .ectdai-card-body {
+    font-size: 16px;
+  }
+
+  .ectdai-feature-icon {
+    margin: 0 auto;
+  }
+
+  .ectdai-demo-btn {
+    max-width: 300px;
+    margin: 2rem auto 0;
+    display: block;
+    text-align: center;
+  }
+
+  .ectdai-demo-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .ectdai-hero-title {
+    font-size: 28px;
+  }
+
+  .ectdai-hero-logo img {
+    width: 120px;
+  }
+
+  .ectdai-card {
+    padding: 20px;
+  }
+
+  .ectdai-card-title {
+    font-size: 22px;
+  }
+
+  .ectdai-card-body {
+    font-size: 15px;
+  }
+
+  .ectdai-feature-title {
+    font-size: 17px;
+  }
+
+  .ectdai-feature-description {
+    font-size: 14px;
+  }
+
+  .ectdai-demo-btn {
+    font-size: 15px;
+    padding: 0.875rem 2rem;
+  }
+}
+
+/* Tablet Responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .ectdai-content {
+    padding: 2.5rem 2rem 3.5rem;
+  }
+
+  .ectdai-card {
+    padding: 30px;
+  }
+
+  .ectdai-card-title {
+    font-size: 26px;
+  }
+
+  .ectdai-card-body {
+    font-size: 16px;
+  }
+
+  .ectdai-feature-title {
+    font-size: 19px;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+.ectdai-demo-btn:focus,
+.ectdai-hero-logo:focus {
+  outline: 2px solid #1e82c9;
+  outline-offset: 2px;
+}
+
+/* Loading animation for images */
+.ectdai-hero-logo img {
+  transition: opacity 0.3s ease;
+}
+
+.ectdai-hero-logo img:not([src]) {
+  opacity: 0;
+}

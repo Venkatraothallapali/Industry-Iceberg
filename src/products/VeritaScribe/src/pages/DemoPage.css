@@ -1,0 +1,357 @@
+/* Remove default browser spacing */
+.veritascribe-app html, .veritascribe-app body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure root container has no spacing */
+.veritascribe-app #root {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove any default margins from demo page */
+.veritascribe-app .schedule-demo-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e6f2fa 0%, #f0f7fc 50%, #e6f7eb 100%);
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navigation */
+.veritascribe-app .demo-nav {
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.veritascribe-app .demo-nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.veritascribe-app .demo-nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.veritascribe-app .demo-nav-logo {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+}
+
+.veritascribe-app .demo-nav-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1e82c9;
+}
+
+/* Main Content */
+.veritascribe-app .demo-content-wrapper {
+  flex: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2rem 1rem 2rem; /* Added more top padding to account for nav */
+  margin-top: 0; /* Ensure no negative margin */
+}
+
+.veritascribe-app .demo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem; /* Increased gap to prevent overlap */
+  align-items: start;
+  margin-top: 0;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .veritascribe-app .demo-grid {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+/* Left Side */
+.veritascribe-app .demo-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.veritascribe-app .demo-main-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  /* margin: 0 0 0.5rem 0;  */
+  margin-top: 0;
+}
+
+.veritascribe-app .demo-main-description {
+  font-size: 0.875rem;
+  color: #4b5563;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.veritascribe-app .demo-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.veritascribe-app .demo-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.veritascribe-app .demo-feature-icon {
+  margin-top: 0.125rem;
+  padding: 0.375rem;
+  background: rgba(30, 130, 201, 0.1);
+  border-radius: 8px;
+  color: #1e82c9;
+}
+
+.veritascribe-app .demo-feature-icon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.veritascribe-app .demo-feature-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0 0 0.125rem 0;
+}
+
+.veritascribe-app .demo-feature-description {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Right Side - Form */
+.veritascribe-app .demo-form-container {
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+              0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  position: relative;
+  z-index: 2;
+  margin-top: 0;
+}
+
+.veritascribe-app .demo-form-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.veritascribe-app .demo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.veritascribe-app .demo-form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .veritascribe-app .demo-form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.veritascribe-app .demo-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.veritascribe-app .demo-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.veritascribe-app .demo-input {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+  background: #f9fafb;
+}
+
+.veritascribe-app .demo-input:focus {
+  outline: none;
+  border-color: #1e82c9;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(30, 130, 201, 0.1);
+}
+
+.veritascribe-app .demo-input-error {
+  border-color: #ef4444;
+}
+
+.veritascribe-app .demo-error {
+  font-size: 0.75rem;
+  color: #ef4444;
+  margin-top: 0.25rem;
+}
+
+.veritascribe-app .demo-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+}
+
+.veritascribe-app .demo-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.veritascribe-app .demo-submit-btn {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: #1e82c9;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 1rem;
+}
+
+.veritascribe-app .demo-submit-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(30, 130, 201, 0.25);
+}
+
+.veritascribe-app .demo-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.veritascribe-app .demo-submit-btn-loading {
+  cursor: wait;
+}
+
+.veritascribe-app .demo-rocket-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.veritascribe-app .demo-spinner {
+  width: 16px;
+  height: 16px;
+  animation: demo-spin 1s linear infinite;
+}
+
+.veritascribe-app .demo-spinner-circle {
+  opacity: 0.25;
+}
+
+.veritascribe-app .demo-spinner-path {
+  opacity: 0.75;
+}
+
+@keyframes demo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.veritascribe-app .demo-submit-note {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+}
+
+.veritascribe-app .success-message {
+  color: #059669;
+  background-color: #d1fae5;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 1rem;
+  border: 1px solid #10b981;
+}
+
+/* Mobile Responsive Fixes */
+@media (max-width: 768px) {
+  .veritascribe-app .demo-content-wrapper {
+    padding: 1.5rem 1rem 2rem;
+  }
+  
+  .veritascribe-app .demo-grid {
+    gap: 1.5rem;
+  }
+  
+  .veritascribe-app .demo-form-container {
+    padding: 1rem;
+  }
+  
+  .veritascribe-app .demo-left {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .veritascribe-app .demo-content-wrapper {
+    padding: 1rem 0.75rem 2rem;
+  }
+  
+  .veritascribe-app .demo-grid {
+    gap: 1rem;
+  }
+  
+  .veritascribe-app .demo-form-container {
+    padding: 0.75rem;
+  }
+}
+
+.veritascribe-app .error-message {
+  color: #dc2626;
+  background-color: #fee2e2;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 1rem;
+}

@@ -1,0 +1,78 @@
+/* Navbar.css - CompliSense specific styles */
+
+/* Glass effect + sticky top - scoped to CompliSense */
+.complisense-app .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+}
+
+/* Container layout - scoped to CompliSense */
+.complisense-app .navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+
+/* Brand Logo - scoped to CompliSense */
+.complisense-app .navbar-brand {
+  display: flex;
+  align-items: center;
+  order: 1; /* Logo on left */
+}
+
+.complisense-app .navbar-logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.complisense-app .navbar-logo-wrapper:hover {
+  transform: scale(1.1);
+}
+
+.complisense-app .navbar-logo {
+  width: 158px;
+  height: 59px;
+  object-fit: contain;
+}
+
+/* Navbar Links - scoped to CompliSense */
+.complisense-app .navbar-items {
+  display: flex;
+  gap: 0.5rem;
+  order: 2; /* Nav items on right */
+  margin-left: auto; /* Push to right */
+}
+
+.complisense-app .navbar-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0.625rem 1.25rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: #374151; /* gray-700 */
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.complisense-app .navbar-link:hover {
+  color: #1e82c9;
+  border-bottom-color: #1e82c9;
+}
+
+.complisense-app .navbar-link.active {
+  color: #1e82c9;
+  border-bottom-color: #1e82c9;
+}

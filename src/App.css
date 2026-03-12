@@ -1,0 +1,13 @@
+.App {
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Smooth scroll animations */
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}

@@ -1,0 +1,56 @@
+.who-we-are-section {
+  padding: 4rem 2rem 1rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.who-we-are-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.who-we-are-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.who-we-are-description {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  color: #555;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.who-we-are-description p {
+  margin-bottom: 1.5rem;
+}
+
+.description-outro {
+  font-weight: 700;
+  color: #1e82c9;
+  margin-top: 2rem;
+  text-align: center;
+  background-color: #f0f7ff;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(30, 130, 201, 0.2);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .who-we-are-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .who-we-are-title {
+    font-size: 2rem;
+  }
+
+  .who-we-are-description {
+    font-size: 1rem;
+  }
+}

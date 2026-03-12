@@ -1,0 +1,407 @@
+.enterprise-llm-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  display: flex;
+  flex-direction: column;
+}
+
+.enterprise-llm-header {
+  background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.7) 100%),
+                    url('/assets/Enterprise_LLM_Solutions.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 6rem 2rem 4rem 2rem;
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  margin-top: 80px;
+}
+
+.enterprise-llm-header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.enterprise-llm-header .enterprise-llm-header-title {
+  font-size: clamp(2.1rem, 4.2vw, 3rem);
+}
+
+.enterprise-llm-header .enterprise-llm-header-subtitle {
+  font-size: 1.125rem;
+  margin: 1rem 0 0 0;
+  opacity: 0.9;
+}
+
+.enterprise-llm-main-layout {
+  display: flex;
+  flex: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0.5cm 2rem 2rem 2rem;
+}
+
+.enterprise-llm-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.enterprise-llm-section-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  border-bottom: 2px solid var(--primary-blue);
+  color: var(--primary-blue);
+}
+
+.enterprise-llm-content-section {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.enterprise-llm-capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.enterprise-llm-capability-card {
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  background: #fafafa;
+  transition: all 0.2s ease;
+}
+
+.enterprise-llm-capability-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-color: #1e82c9;
+}
+
+.enterprise-llm-capability-icon {
+  width: 48px;
+  height: 48px;
+  background: #1e82c9;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.enterprise-llm-capability-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.enterprise-llm-capability-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #10455C;
+  margin: 0 0 0.5rem 0;
+}
+
+.enterprise-llm-capability-description {
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.9375rem;
+}
+
+.enterprise-llm-workflow-steps {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.enterprise-llm-workflow-step {
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+  background: #f9fafb;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+}
+
+.enterprise-llm-step-number {
+  width: 48px;
+  height: 48px;
+  background: #1e82c9;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.enterprise-llm-step-content {
+  flex: 1;
+}
+
+.enterprise-llm-step-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #10455C;
+  margin: 0 0 0.5rem 0;
+}
+
+.enterprise-llm-step-description {
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.9375rem;
+}
+
+.enterprise-llm-workflow-arrow {
+  font-size: 2rem;
+  color: #1e82c9;
+  font-weight: 700;
+}
+
+.enterprise-llm-use-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.enterprise-llm-use-case-card {
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  background: #fafafa;
+  transition: all 0.2s ease;
+}
+
+.enterprise-llm-use-case-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-color: #1e82c9;
+}
+
+.enterprise-llm-use-case-icon {
+  width: 48px;
+  height: 48px;
+  background: #1e82c9;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.enterprise-llm-use-case-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.enterprise-llm-use-case-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #10455C;
+  margin: 0 0 0.5rem 0;
+}
+
+.enterprise-llm-use-case-description {
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.9375rem;
+}
+
+.enterprise-llm-governance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.enterprise-llm-governance-card {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.enterprise-llm-governance-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-color: #1e82c9;
+}
+
+.enterprise-llm-governance-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #10455C;
+  margin: 0 0 0.5rem 0;
+}
+
+.enterprise-llm-governance-description {
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.9375rem;
+}
+
+.enterprise-llm-cta-card {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+
+.enterprise-llm-cta-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/assets/lms_footer_background.png');
+  background-size: cover;
+  background-position: center;
+  filter: blur(1px);
+  z-index: -1;
+  transform: scale(1.03);
+}
+
+.enterprise-llm-cta-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.enterprise-llm-cta-heading {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  color: #1e82c9;
+  border-bottom: 2px solid var(--primary-blue);
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.enterprise-llm-cta-section-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  border-bottom: 2px solid var(--primary-blue);
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.enterprise-llm-cta-subtext {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.enterprise-llm-cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.enterprise-llm-cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #ffffff;
+  color: #1e82c9;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.enterprise-llm-cta-button:hover {
+  background: #f3f4f6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.enterprise-llm-footer {
+  background: #1A1A1A;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+.enterprise-llm-footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.enterprise-llm-footer-text {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.875rem;
+}
+
+@media (max-width: 1024px) {
+  .enterprise-llm-main-layout {
+    padding: 1.5rem 1.5rem 2rem 1.5rem;
+  }
+  
+  .enterprise-llm-workflow-steps {
+    flex-direction: column;
+  }
+  
+  .enterprise-llm-workflow-arrow {
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .enterprise-llm-header {
+    padding: 5rem 1.5rem 3rem 1.5rem;
+    margin-top: 70px;
+  }
+
+  .enterprise-llm-main-layout {
+    padding: 1rem;
+  }
+
+  .enterprise-llm-content-section {
+    padding: 1.5rem;
+  }
+  
+  .enterprise-llm-capabilities-grid,
+  .enterprise-llm-use-cases-grid,
+  .enterprise-llm-governance-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .enterprise-llm-workflow-step {
+    min-width: auto;
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .enterprise-llm-section-title {
+    font-size: 1.5rem;
+  }
+}

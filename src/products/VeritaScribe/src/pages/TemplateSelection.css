@@ -1,0 +1,232 @@
+/* Page Background */
+.veritascribe-app .template-selection-page {
+  min-height: 100vh;
+  background: #f8fafc;
+}
+
+/* Navigation */
+.veritascribe-app .template-nav {
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.veritascribe-app .template-nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.veritascribe-app .template-nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.veritascribe-app .template-nav-logo {
+  width: 28px;
+  height: 28px;
+}
+
+.veritascribe-app .template-nav-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1e82c9;
+}
+
+/* Content */
+.veritascribe-app .template-content-wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.veritascribe-app .template-title {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.veritascribe-app .template-subtitle {
+  font-size: 1rem;
+  color: #64748b;
+  margin-bottom: 2rem;
+}
+
+/* Grid */
+.veritascribe-app .template-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.veritascribe-app .template-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.veritascribe-app .template-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.veritascribe-app .template-card.selected {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* ICON BASE */
+.veritascribe-app .template-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.veritascribe-app .template-icon svg {
+  color: white;
+  font-size: 1.25rem;
+}
+
+/* Category Icons */
+.veritascribe-app .template-icon.ind { background-color: #2563eb; }
+.veritascribe-app .template-icon.nda { background-color: #16a34a; }
+.veritascribe-app .template-icon.anda { background-color: #2563eb; }
+.veritascribe-app .template-icon.dmf { background-color: #ea580c; }
+.veritascribe-app .template-icon.photostability { background-color: #0d9488; }
+
+/* Text */
+.veritascribe-app .template-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.veritascribe-app .template-category {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: #f1f5f9;
+  color: #475569;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* --- PREVIEW SECTION: UPDATED FOR IMAGE 2 --- */
+.veritascribe-app .template-preview {
+  background: white;
+  border-radius: 12px;
+  padding: 2.5rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.veritascribe-app .preview-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0f172a; /* Deeper black */
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.veritascribe-app .preview-content {
+  background: #ffffff; /* Pure white background like Image 2 */
+  border-radius: 4px;
+  padding: 2rem;
+  max-height: 600px;
+  overflow-y: auto;
+  border: 1px solid #e2e8f0;
+}
+
+.veritascribe-app .preview-text {
+  white-space: pre-wrap;
+  /* System font stack for that professional sharp look */
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 14px;
+  color: #1e293b; /* Dark charcoal/black for high contrast */
+  line-height: 1.7; /* Tightened from 1.8 to match second image spacing */
+  -webkit-font-smoothing: antialiased; /* High sharpness */
+  letter-spacing: -0.01em;
+}
+
+/* --- HIGHLIGHTER: UPDATED FOR IMAGE 2 --- */
+.veritascribe-app .placeholder-line {
+  background-color: #fef08a; /* Cleaner, lighter yellow from Image 2 */
+  color: #0f172a;
+  padding: 2px 8px;
+  border-radius: 4px;
+  margin: 2px 0;
+  display: inline-block; /* Inline-block allows specific widths per line */
+  width: 100%;
+  box-sizing: border-box;
+  font-weight: 500;
+}
+
+.veritascribe-app .preview-legend {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.875rem;
+  color: #64748b;
+  font-family: inherit;
+}
+
+.veritascribe-app .legend-indicator {
+  width: 14px;
+  height: 14px;
+  background: #fef08a;
+  border-radius: 2px;
+  display: inline-block;
+}
+
+/* Continue Button */
+.veritascribe-app .template-actions {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.veritascribe-app .template-continue-btn {
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.veritascribe-app .template-continue-btn.enabled {
+  background: #3b82f6;
+  color: white;
+}
+
+.veritascribe-app .template-continue-btn.enabled:hover {
+  background: #2563eb;
+}
+
+.veritascribe-app .template-continue-btn.disabled {
+  background: #e2e8f0;
+  color: #94a3b8;
+  cursor: not-allowed;
+}

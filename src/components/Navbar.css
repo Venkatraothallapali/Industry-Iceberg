@@ -1,0 +1,392 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px) saturate(120%);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 1000;
+  padding: 1.1rem 0;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.navbar::after {
+  /* content: ''; */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--primary-blue) 18%,
+    var(--accent-green) 32%,
+    var(--primary-blue) 55%,
+    transparent 100%
+  );
+  opacity: 0.2;
+}
+
+.navbar-scrolled {
+  padding: 0.9rem 0;
+  box-shadow: var(--shadow-lg);
+  border-bottom-color: var(--border-dark);
+  background: rgba(255, 255, 255, 0.94);
+}
+
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform var(--transition-base);
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+
+.navbar-logo img {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-left: auto; /* Push menu items to the right */
+}
+
+/* --- NAV LINK: Added width constraint --- */
+.nav-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  transition: all var(--transition-base);
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0; /* Keep padding vertical only */
+  font-family: inherit;
+  letter-spacing: -0.01em;
+  display: inline-block; /* Changed: Ensures box doesn't grow horizontally */
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-blue);
+  transition: width var(--transition-base);
+}
+
+.nav-link:hover {
+  color: var(--primary-blue);
+  font-weight: 600;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:focus-visible,
+.dropdown-trigger:focus-visible {
+  outline: 2px solid var(--accent-green);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+.nav-link-subtle {
+  color: var(--text-secondary);
+  padding: 0.5rem 0.35rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  font-weight: 600; /* Make Contact bold like Products */
+}
+
+.nav-link-subtle:hover {
+  color: var(--primary-blue);
+  background: var(--primary-blue-lighter);
+  font-weight: 600; /* Keep bold on hover */
+}
+
+.nav-link.contact-btn {
+  /* Match regular nav-link look: no pill, no border */
+  background: none;
+  color: var(--text-primary);
+  padding: 0.5rem 0;
+  border-radius: 0;
+  font-weight: 500;
+  box-shadow: none;
+  border: none;
+}
+
+/* 1. Ensure the container spans the full height of the navbar */
+.nav-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%; /* Makes the trigger area reach the bottom of the white bar */
+}
+
+
+/* 3. Add the 'Invisible Bridge' - extends hover area to dropdown */
+.nav-dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 0.5rem; /* Bridge gap between trigger and menu */
+  background: transparent;
+  z-index: 1001; /* Above other elements but below dropdown menu */
+  pointer-events: auto;
+}
+
+/* --- DROPDOWN TRIGGER: Specific horizontal padding --- */
+.dropdown-trigger {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.75rem; /* Specific area for cursor interaction */
+  pointer-events: auto; /* Ensure button is clickable */
+  cursor: pointer; /* Show pointer cursor */
+}
+
+.dropdown-arrow {
+  font-size: 0.65rem;
+  transition: transform 0.2s ease;
+  color: var(--text-muted);
+}
+
+.dropdown-arrow.active {
+  transform: rotate(180deg);
+}
+
+/* 2. Fix the menu positioning */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem); /* Small gap for visual spacing */
+  left: 0;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 0.75rem 0;
+  min-width: 260px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  animation: fadeInDown 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1002; /* Above the bridge and navbar */
+  backdrop-filter: blur(10px);
+  pointer-events: auto;
+  display: block; /* Ensure it's visible */
+  visibility: visible; /* Ensure it's visible */
+  opacity: 1; /* Ensure it's visible */
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dropdown-item {
+  display: block;
+  padding: 0.875rem 1.75rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all var(--transition-base);
+  font-size: 0.9rem;
+  font-weight: 500;
+  position: relative;
+}
+
+.dropdown-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 0;
+  background: var(--primary-gradient);
+  transition: height var(--transition-base);
+  border-radius: 0 2px 2px 0;
+}
+
+.dropdown-item:hover {
+  background: var(--primary-blue-light);
+  color: var(--primary-blue);
+  padding-left: 2rem;
+}
+
+.dropdown-item:hover::before {
+  height: 60%;
+  background: var(--primary-blue);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Hamburger Toggle */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 3px;
+  background-color: var(--text-primary);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.navbar-toggle.active .hamburger-line:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.navbar-toggle.active .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.active .hamburger-line:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+@media (max-width: 960px) {
+  .navbar-container {
+    padding: 0 1.5rem;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(12px);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem 2rem;
+    gap: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    border-top: 1px solid var(--border-light);
+    max-height: 80vh;
+    overflow-y: auto;
+    margin-right: 0; /* Reset margin */
+  }
+
+  .navbar-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .nav-dropdown {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .nav-dropdown::after {
+    display: none; /* Remove bridge */
+  }
+
+  .dropdown-trigger {
+    width: 100%;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-light);
+  }
+
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    background: var(--bg-secondary);
+    padding: 0.5rem 0;
+    min-width: auto;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    animation: none;
+    border-radius: var(--radius-md);
+    margin-top: 0.5rem;
+    display: block; /* Ensure it renders in flow */
+  }
+  
+  .dropdown-item {
+    padding: 0.75rem 1.5rem;
+  }
+
+  .nav-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .nav-link.contact-btn {
+    width: 100%;
+    text-align: center;
+    background: var(--primary-blue);
+    color: white;
+    border-radius: var(--radius-md);
+  }
+
+  .navbar-logo img {
+    height: 40px;
+  }
+}

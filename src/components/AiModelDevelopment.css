@@ -1,0 +1,400 @@
+ .ai-technologies-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  display: flex;
+  flex-direction: column;
+}
+
+.ai-technologies-header {
+  position: relative;
+  padding: 6rem 2rem 4rem 2rem;
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  margin-top: 80px;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.ai-technologies-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+ background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.65) 100%),
+                    url('/assets/ai_model_dev_background.png');
+  background-size: cover;
+  background-position: center 72%;
+  background-repeat: no-repeat;
+ filter: blur(0.3px);
+  z-index: -1;
+}
+
+.ai-technologies-header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.ai-technologies-header .ai-technologies-header-title {
+ font-size: clamp(2.1rem, 4.2vw, 3rem);
+}
+
+.ai-technologies-main-layout {
+  display: flex;
+  flex: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0.5cm 2rem 2rem 2rem;
+  gap: 2rem;
+}
+
+.ai-technologies-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.ai-technologies-content-section {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 2rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.ai-technologies-section-title {
+ font-size: 1.875rem;
+ font-weight: 700;
+ margin: 0 0 1.5rem 0;
+ border-bottom: 2px solid var(--primary-blue);
+ color: var(--primary-blue);
+}
+
+.ai-technologies-workflow-steps {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.ai-technologies-workflow-step {
+  flex: 1;
+  min-width: 200px;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+  background: #f9fafb;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+}
+
+.ai-technologies-step-number {
+  width: 48px;
+  height: 48px;
+  background: #1e82c9;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.ai-technologies-step-content {
+  flex: 1;
+}
+
+.ai-technologies-step-icon {
+  width: 48px;
+  height: 48px;
+  background: #1e82c9;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.ai-technologies-step-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.ai-technologies-step-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #10455C;
+  margin: 0 0 0.5rem 0;
+}
+
+.ai-technologies-step-description {
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.9375rem;
+}
+
+.ai-technologies-workflow-arrow {
+  font-size: 2rem;
+  color: #1e82c9;
+  font-weight: 700;
+}
+
+.ai-technologies-use-cases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.ai-technologies-use-case-card {
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  background: #fafafa;
+  transition: all 0.2s ease;
+}
+
+.ai-technologies-use-case-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-color: #1e82c9;
+}
+
+.ai-technologies-use-case-icon {
+  width: 48px;
+  height: 48px;
+  background: #1e82c9;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.ai-technologies-use-case-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.ai-technologies-use-case-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #10455C;
+  margin: 0 0 0.5rem 0;
+}
+
+.ai-technologies-use-case-description {
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.9375rem;
+}
+
+.ai-technologies-technical-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.ai-technologies-technical-column {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+.ai-technologies-technical-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #10455C;
+  margin: 0 0 1rem 0;
+}
+
+.ai-technologies-technical-list {
+  padding-left: 1.25rem;
+  margin: 0;
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+.ai-technologies-technical-list li {
+  margin-bottom: 0.5rem;
+}
+
+.ai-technologies-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.ai-technologies-benefit-card {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.ai-technologies-benefit-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-color: #1e82c9;
+}
+
+.ai-technologies-benefit-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #10455C;
+  margin: 0 0 0.5rem 0;
+}
+
+.ai-technologies-benefit-description {
+  color: #6b7280;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.9375rem;
+}
+
+.ai-technologies-cta-card {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+
+.ai-technologies-cta-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background: linear-gradient(#0009, #0009),url('/assets/lms_footer_background.png');
+  background-size: cover;
+  background-position: center;
+  filter: blur(1px);
+  z-index: -1;
+  transform: scale(1.03);
+}
+
+.ai-technologies-cta-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.ai-technologies-cta-heading {
+  color: #ffffff !important;
+}
+
+.ai-technologies-cta-section-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin: 0 0 1.5rem 0;
+  color: #ffffff;
+  border-bottom: 2px solid var(--primary-blue);
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.ai-technologies-cta-subtext {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.ai-technologies-cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.ai-technologies-cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: #ffffff;
+  color: #1e82c9;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.ai-technologies-cta-button:hover {
+  background: #f3f4f6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.ai-technologies-page .ai-technologies-footer {
+  background: #1A1A1A !important;
+  color: white !important;
+  padding: 2rem !important;
+  text-align: center !important;
+  margin-top: auto !important;
+}
+
+.ai-technologies-page .ai-technologies-footer .ai-technologies-footer-content {
+  display: block !important;
+  max-width: 1400px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+  grid-template-columns: unset !important;
+  gap: unset !important;
+}
+
+.ai-technologies-page .ai-technologies-footer .ai-technologies-footer-text {
+  margin: 0 !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 0.875rem !important;
+  text-align: center !important;
+}
+
+@media (max-width: 1024px) {
+  .ai-technologies-main-layout {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .ai-technologies-header {
+    padding: 5rem 1.5rem 3rem 1.5rem;
+    margin-top: 70px;
+  }
+
+  .ai-technologies-main-layout {
+    padding: 1rem;
+  }
+
+  .ai-technologies-content-section {
+    padding: 1.5rem;
+  }
+
+  .ai-technologies-workflow-steps {
+    flex-direction: column;
+  }
+
+  .ai-technologies-workflow-arrow {
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-technologies-section-title {
+    font-size: 1.5rem;
+  }
+}

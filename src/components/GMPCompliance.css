@@ -1,0 +1,587 @@
+.gmp-compliance-page {
+  min-height: 100vh;
+  /* Remove blue gradient so hero image appears immediately on all GMP-based solution pages */
+  background: none;
+  position: relative;
+  padding-top: 0;
+}
+
+
+/* Quality Training specific hero background */
+.quality-training-page .gmp-hero {
+  background-image: url('/assets/Video_Gen_Background_Img.png');
+}
+
+.quality-training-page .gmp-hero::before {
+  background-image: url('/assets/Video_Gen_Background_Img.png');
+  filter: none;
+}
+
+/* Complaint Site Selection specific hero background (match Quality Training) */
+.complaint-site-page .gmp-hero {
+  background-image: url('/assets/pharma_img.png');
+  background-position: center bottom;
+}
+
+.complaint-site-page .gmp-hero::before {
+  background-image: url('/assets/pharma_img.png');
+  background-position: center bottom;
+  filter: blur(1px);
+}
+
+/* Hero Section */
+.gmp-hero {
+  padding: 6rem 2rem 0;
+  text-align: center;
+  color: white;
+  background-image: url('/assets/homepage_background_img.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0;
+  margin-top: 80px;
+}
+
+.gmp-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/assets/homepage_background_img.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  filter: blur(0.5px);
+  z-index: 0;
+}
+
+.gmp-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.gmp-hero {
+  background-image: none;
+}
+
+.hero-card {
+  background: transparent;
+  border-radius: 0.75rem;
+  padding: 0;
+  max-width: 230px;
+  width: 100%;
+  margin: 1.5rem auto 0;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-logo img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .hero-logo img {
+    max-width: 160px;
+  }
+
+  .gmp-hero {
+    min-height: 400px;
+    padding: 5rem 1rem 2rem;
+  }
+
+  .hero-title {
+    margin-left: 0;
+  }
+
+  .quality-training-page .hero-title,
+  .quality-training-page .hero-card,
+  .complaint-site-page .hero-title,
+  .complaint-site-page .hero-card {
+    transform: none;
+    margin: 0 auto 1rem;
+  }
+  
+  .complaint-site-page .hero-title {
+    display: block;
+    width: fit-content;
+  }
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: white;
+  margin: 0 0 1rem 0;
+  margin-left: -3rem;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+/* Quality Training title color override */
+.quality-training-page .hero-title {
+  color: #1e82c9;
+  transform: translateY(-1cm);
+}
+
+.quality-training-page .hero-card {
+  transform: translateY(-1cm);
+}
+
+/* Complaint Site Selection title color override */
+.complaint-site-page .hero-title {
+  color: #1e82c9;
+  transform: translate(2rem, -3.5rem);
+  background-color: white;
+  display: inline-block;
+  padding: 0.2rem 0.8rem;
+  border-radius: 4px;
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.complaint-site-page .hero-card {
+  transform: translateY(-4rem);
+}
+
+.hero-subtitle {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  color: white;
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+}
+
+.hero-description {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 2rem 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.gmp-compliance-page .btn-primary,
+.gmp-compliance-page .btn-secondary {
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  font-family: inherit;
+}
+
+.gmp-compliance-page .btn-primary {
+  background: white;
+  color: #1e82c9;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.gmp-compliance-page .btn-primary:hover {
+  background: #f3f4f6;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.gmp-compliance-page .btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.gmp-compliance-page .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Content Section */
+.gmp-content {
+  padding: 0 2rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 0.4cm;
+}
+
+.gmp-compliance-page .content-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.gmp-compliance-page .content-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.gmp-compliance-page .content-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--primary-blue-light);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--primary-blue);
+}
+
+.gmp-compliance-page .content-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.gmp-compliance-page .content-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.gmp-compliance-page .content-body {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.gmp-compliance-page .content-body p {
+  margin-bottom: 1rem;
+}
+
+.gmp-compliance-page .content-body p:last-child {
+  margin-bottom: 0;
+}
+
+.gmp-compliance-page .content-body strong {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.gmp-compliance-page .content-intro {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-size: 1.0625rem;
+}
+
+.gmp-compliance-page .content-intro strong {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+/* Features List */
+.gmp-compliance-page .features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.gmp-compliance-page .feature-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.gmp-compliance-page .feature-item .feature-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--primary-blue-light);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--primary-blue);
+  margin-top: 0;
+}
+
+.gmp-compliance-page .feature-item .feature-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.gmp-compliance-page .feature-content {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.gmp-compliance-page .feature-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0 0 0.5rem;
+}
+
+.gmp-compliance-page .feature-description {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.gmp-compliance-page .feature-description strong {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+/* Complete Solution */
+.complete-solution {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.solution-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0 0 1rem 0;
+}
+
+.solution-description {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.solution-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.solution-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.solution-list li svg {
+  width: 20px;
+  height: 20px;
+  color: var(--accent-green);
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--primary-blue-light);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+}
+
+.stat-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.stat-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0 0 0.75rem 0;
+}
+
+.stat-description {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* CTA Section */
+.gmp-cta {
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.cta-title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: #1e82c9;
+  margin: 0 0 1rem 0;
+}
+
+.cta-subtitle {
+  font-size: 1.25rem;
+  color: #1e82c9;
+  margin: 0 0 2rem 0;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gmp-compliance-page .btn-cta-primary,
+.gmp-compliance-page .btn-cta-secondary {
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  font-family: inherit;
+}
+
+.gmp-compliance-page .btn-cta-primary {
+  background: white;
+  color: #1e82c9;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.gmp-compliance-page .btn-cta-primary:hover {
+  background: #f3f4f6;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.gmp-compliance-page .btn-cta-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.gmp-compliance-page .btn-cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gmp-hero {
+    padding: 3rem 1.5rem 2rem;
+  }
+
+  .hero-card {
+    max-width: 230px;
+    padding: 1.5rem;
+    margin: 3rem auto 1rem;
+  }
+
+  .hero-logo img {
+    max-width: 155px;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .gmp-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .content-card {
+    padding: 1.5rem;
+  }
+
+  .feature-item {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-cta-primary,
+  .btn-cta-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .content-title {
+    font-size: 1.5rem;
+  }
+
+  .gmp-compliance-page .feature-title,
+  .gmp-compliance-page .stat-title {
+    font-size: 1.25rem;
+  }
+
+  .gmp-compliance-page .feature-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .gmp-compliance-page .feature-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+}

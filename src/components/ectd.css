@@ -1,0 +1,585 @@
+/* CSS Variables */
+:root {
+  --primary-blue-light: #e3f2fd;
+  --primary-blue: #1e82c9;
+  --text-dark: #1a1a1a;
+  --text-secondary: #6b7280;
+  --border-color: #e5e7eb;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --transition-base: 0.3s ease;
+  --spacing-sm: 1rem;
+}
+
+.veritascribe-page {
+  min-height: 100vh;
+  /* Remove blue gradient so hero image appears immediately on AI Drafting / ECTD AI pages */
+  background: none;
+  position: relative;
+}
+
+/* Hero Section */
+.veritascribe-hero {
+  padding: 6rem 2rem 2rem;
+  text-align: center;
+  color: white;
+  background-image: url('/assets/AI Drafting Background_img.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  position: relative;
+  min-height: 600px;
+}
+
+.veritascribe-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/assets/AI Drafting Background_img.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  filter: none;
+  z-index: 0;
+}
+
+.veritascribe-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-card {
+  background: transparent;
+  border-radius: 0.75rem;
+  padding: 0;
+  max-width: 230px;
+  width: 100%;
+  margin: 1.5rem auto 0;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.hero-logo img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  display: block;
+}
+
+.hero-title {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: white;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+/* AI Drafting page title color override */
+.veritascribe-page .hero-title {
+  color: #1e82c9;
+  margin-left: 0.2cm;
+}
+
+/* Slight right shift for ECTD AI hero title only (about 0.2cm) */
+.ectd-ai-page .hero-title {
+  margin-left: 0.2cm;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  color: white;
+  margin: 0 0 0.5rem 0;
+  font-weight: 500;
+}
+
+.hero-description {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 2rem 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.btn-primary,
+/* .btn-secondary {
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+} */
+
+/* .btn-primary {
+  background: white;
+  color: #1e82c9;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+} */
+
+.btn-primary:hover {
+  background: #f3f4f6;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-large {
+  padding: 1.5rem 3.5rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Content Section */
+.veritascribe-content {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.veritascribe-page .content-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-base);
+  text-align: center;
+}
+
+.veritascribe-page .content-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-blue);
+}
+
+.veritascribe-page .content-card h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--primary-blue);
+  margin-bottom: var(--spacing-sm);
+}
+
+.veritascribe-page .content-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.veritascribe-page .content-icon {
+  width: 48px;
+  height: 48px;
+  background: #1e82c9;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: white;
+}
+
+.veritascribe-page .content-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.veritascribe-page .content-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.veritascribe-page .content-body {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.veritascribe-page .content-body p {
+  margin-bottom: 1rem;
+}
+
+.veritascribe-page .content-body p:last-child {
+  margin-bottom: 0;
+}
+
+.veritascribe-page .content-body strong {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.veritascribe-page .content-intro {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-size: 1.0625rem;
+}
+
+.veritascribe-page .content-intro strong {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+/* Features List */
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.feature-item {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  transition: all var(--transition-base);
+}
+
+.feature-item:last-child {
+  border-bottom: none;
+}
+
+.feature-item:hover {
+  background: rgba(30, 130, 201, 0.05);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 0 -1.5rem;
+}
+
+.feature-item .feature-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--primary-blue-light);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--primary-blue);
+  transition: all var(--transition-base);
+}
+
+.feature-item:hover .feature-icon {
+  background: var(--primary-blue);
+  color: white;
+  transform: scale(1.1);
+}
+
+.feature-item .feature-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.feature-item .feature-content {
+  flex: 1;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin: 0 0 0.5rem 0;
+  text-align: left;
+}
+
+.feature-description {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+  text-align: left;
+}
+
+/* Complete Solution */
+.complete-solution {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.solution-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0 0 1rem 0;
+}
+
+.solution-description {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.ectd-demo-btn {
+  padding: 0.65rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 999px;
+  background: #1e82c9;
+  color: #ffffff;
+  border: 2px solid #1e82c9;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: inherit;
+  margin-top: 2rem;
+}
+
+.ectd-demo-btn:hover {
+  background: #1a6ba8;
+  border-color: #1a6ba8;
+  transform: translateY(-2px);
+}
+
+.ectd-demo-btn:active {
+  transform: translateY(0);
+}
+
+.solution-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.solution-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.solution-list li svg {
+  width: 20px;
+  height: 20px;
+  color: var(--accent-green);
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+/* Stats Grid */
+.veritascribe-page .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.veritascribe-page .stat-card {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.veritascribe-page .stat-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--primary-blue-light);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+}
+
+.veritascribe-page .stat-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.veritascribe-page .stat-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin: 0 0 0.75rem 0;
+}
+
+.veritascribe-page .stat-description {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* CTA Section */
+.veritascribe-cta {
+  padding: 4rem 2rem;
+  text-align: center;
+  color: white;
+}
+
+.cta-title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: white;
+  margin: 0 0 1rem 0;
+}
+
+.cta-subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 2rem 0;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-cta-primary,
+.btn-cta-secondary {
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-cta-primary {
+  background: white;
+  color: #1e82c9;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.btn-cta-primary:hover {
+  background: #f3f4f6;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-cta-secondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .veritascribe-hero {
+    padding: 3rem 1.5rem 2rem;
+  }
+
+  .hero-card {
+    max-width: 230px;
+    padding: 1.5rem;
+    margin: 3rem auto 1rem;
+  }
+
+  .hero-logo img {
+    max-width: 155px;
+  }
+
+  .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .veritascribe-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .content-card {
+    padding: 1.5rem;
+  }
+
+  .feature-item {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-cta-primary,
+  .btn-cta-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .content-title {
+    font-size: 1.5rem;
+  }
+
+  .feature-title,
+  .stat-title {
+    font-size: 1.25rem;
+  }
+}
