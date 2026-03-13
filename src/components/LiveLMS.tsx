@@ -1,6 +1,4 @@
-import type { FC } from 'react'
-import { useNavigate } from 'react-router-dom'
-import { useEffect, useState } from 'react'
+import { FC, useEffect, useState } from 'react';import { useNavigate } from 'react-router-dom'
 import './LiveLMS.css'
 
 const LiveLMS: FC = () => {

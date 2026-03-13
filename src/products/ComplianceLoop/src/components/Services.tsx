@@ -5,9 +5,7 @@ import './Services.css'
 import Navbar from './Navbar'
 
 // Type assertions for imported data
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const typedServices: Service[] = services as any;
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const typedKeyFeatures: string[] = keyFeatures as any;
 
 const Services: React.FC = () => {

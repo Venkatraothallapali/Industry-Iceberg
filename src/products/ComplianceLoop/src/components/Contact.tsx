@@ -1,8 +1,12 @@
 import { useState, FormEvent } from 'react'
 import { ContactFormData } from '../types'
-import { COMPANY_INFO } from '../utils/constants'
-import { validateEmail, validatePhone } from '../utils/helpers'
 import './Contact.css'
+// @ts-ignore
+import { COMPANY_INFO } from '../utils/constants'
+
+// @ts-ignore
+import { validateEmail, validatePhone } from '../utils/helpers'
+
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormData>({

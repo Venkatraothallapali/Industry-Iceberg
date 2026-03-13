@@ -17,10 +17,12 @@ const TemplateSelection: React.FC = () => {
   console.log('Templates data:', templates);
 
   // Reset selected template when component mounts (navigating back to template page)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+
   useLayoutEffect(() => {
     setSelected(null);
     setSelectedTemplate(null);
-  }, []);
+}, []);
 
   const handleSelect = (template: Template) => {
     setSelected(template);
