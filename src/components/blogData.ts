@@ -1,6 +1,8 @@
 export interface BlogPost {
   id: number
   title: string
+  slug: string
+  metaDescription: string
   excerpt: string
   author: string
   date: string
@@ -19,6 +21,8 @@ export const blogData: BlogPost[] = [
   {
     id: 1,
     title: 'US-FDA: Practical Use of Bayesian Methodology in Clinical Trials for Drugs and Biologics',
+    slug: 'fda-bayesian-methodology-clinical-trials-drugs-biologics',
+    metaDescription: 'The US FDA guidance on Bayesian statistical methods in clinical trials explains how to combine prior knowledge with current trial data for drugs and biological products.',
     excerpt: 'The US FDA has issued detailed guidance explaining how Bayesian statistical methods can be used in clinical trials for drugs and biological products. These methods allow prior knowledge and current trial data to be combined in a structured and transparent way.',
     author: 'Regulatory Intelligence Team',
     date: 'January 2026',
@@ -40,6 +44,8 @@ export const blogData: BlogPost[] = [
   {
     id: 2,
     title: 'EMA: Joint EMA–FDA Principles for Artificial Intelligence in Medicines Development',
+    slug: 'ema-fda-principles-artificial-intelligence-medicines-development',
+    metaDescription: 'EMA and FDA establish unified principles for safe, ethical, and effective AI use across the medicines lifecycle, from research to post-authorisation.',
     excerpt: 'The European Medicines Agency (EMA), in collaboration with the US-FDA, has established a unified set of principles to guide the safe, ethical, and effective use of artificial intelligence across the medicines lifecycle.',
     author: 'Regulatory Intelligence Team',
     date: 'January 2026',
@@ -61,6 +67,8 @@ export const blogData: BlogPost[] = [
   {
     id: 3,
     title: 'Japan – PMDA: Strategic Action Plan for AI Integration in Pharmaceutical and Medical Device Operations',
+    slug: 'japan-pmda-strategic-action-plan-ai-integration-pharmaceutical-medical-device',
+    metaDescription: 'Japan PMDA outlines comprehensive plan to integrate AI across pharmaceutical and medical device operations, enhancing efficiency and scientific expertise.',
     excerpt: 'The Pharmaceuticals and Medical Devices Agency (PMDA) of Japan is embracing artificial intelligence (AI) to enhance its operational efficiency and scientific expertise. The agency aims to streamline administrative tasks, optimize technical evaluations, and strengthen its capacity.',
     author: 'Regulatory Intelligence Team',
     date: 'December 2025',
@@ -82,6 +90,8 @@ export const blogData: BlogPost[] = [
   {
     id: 4,
     title: 'Saudi Arabia – SFDA: Advancing Digital Health and Medication Safety',
+    slug: 'saudi-arabia-sfda-digital-health-medication-safety',
+    metaDescription: 'Saudi SFDA leads regional digital health regulation through AI integration, enhancing pharmacovigilance, medication safety, and cosmetic product oversight.',
     excerpt: 'Saudi Arabia is emerging as a regional leader in digital health regulation through the Saudi Food and Drug Authority (SFDA). By integrating automation, data analytics, and AI technologies, the SFDA is enhancing pharmacovigilance, medication safety, and cosmetic product oversight.',
     author: 'Regulatory Intelligence Team',
     date: 'December 2025',
@@ -103,6 +113,8 @@ export const blogData: BlogPost[] = [
   {
     id: 5,
     title: 'EMA: Reflection Framework on the Use of Artificial Intelligence Across the Medicinal Product Lifecycle',
+    slug: 'ema-reflection-framework-artificial-intelligence-medicinal-product-lifecycle',
+    metaDescription: 'EMA comprehensive framework for responsible AI use across medicinal product lifecycle, ensuring scientific rigor, ethical grounding, and regulatory compliance.',
     excerpt: 'The European Medicines Agency (EMA) outlines a comprehensive reflection framework for the responsible use of artificial intelligence across the full medicinal product lifecycle, from early research and clinical development to manufacturing and post-authorisation activities.',
     author: 'Regulatory Intelligence Team',
     date: 'November 2025',
@@ -124,6 +136,8 @@ export const blogData: BlogPost[] = [
   {
     id: 6,
     title: 'US FDA: Integrated Framework for Artificial Intelligence–Enabled Medical Devices and Software as a Medical Device',
+    slug: 'fda-integrated-framework-artificial-intelligence-medical-devices-samd',
+    metaDescription: 'FDA establishes comprehensive regulatory framework for AI-enabled medical devices and SaMD, covering design, validation, deployment, and lifecycle management.',
     excerpt: 'The US FDA has established an integrated regulatory framework for artificial intelligence used in medical devices and Software as a Medical Device (SaMD), covering both policy direction and practical implementation.',
     author: 'Regulatory Intelligence Team',
     date: 'October 2025',
@@ -145,6 +159,8 @@ export const blogData: BlogPost[] = [
   {
     id: 7,
     title: 'India – CDSCO: Draft Guidance on Regulation of Medical Device Software (SaMD & SiMD)',
+    slug: 'india-cdso-draft-guidance-medical-device-software-samd-simd',
+    metaDescription: 'India CDSCO draft guidance defines regulatory framework for medical device software under Medical Devices Rules 2017, covering SaMD and SiMD classification.',
     excerpt: 'The Central Drugs Standard Control Organization (CDSCO) has released a draft guidance to clearly define how medical device software is regulated in India under the Medical Devices Rules, 2017.',
     author: 'Regulatory Intelligence Team',
     date: 'October 2025',
@@ -162,6 +178,8 @@ export const blogData: BlogPost[] = [
   {
     id: 8,
     title: 'US-FDA: Use of AI to Support Regulatory Decision-Making for Drug and Biological Products',
+    slug: 'fda-ai-support-regulatory-decision-making-drug-biological-products',
+    metaDescription: 'FDA draft guidance provides risk-based credibility assessment framework for AI use in regulatory decision-making for drugs and biological products.',
     excerpt: 'This January 2025 FDA draft guidance provides recommendations on how artificial intelligence can be used to generate data or information that supports regulatory decision-making for drugs and biological products.',
     author: 'Regulatory Intelligence Team',
     date: 'September 2025',
@@ -183,6 +201,8 @@ export const blogData: BlogPost[] = [
   {
     id: 9,
     title: 'US-FDA: CBER Approach to Artificial Intelligence and Machine Learning for Biological Products',
+    slug: 'fda-cber-artificial-intelligence-machine-learning-biological-products',
+    metaDescription: 'FDA CBER advances safe, responsible AI/ML use across biological product lifecycle through risk-based approaches and stakeholder engagement.',
     excerpt: 'This USFDA web content describes how the Center for Biologics Evaluation and Research (CBER) is advancing the safe, responsible, and risk-based use of artificial intelligence and machine learning across the biological product lifecycle.',
     author: 'Regulatory Intelligence Team',
     date: 'April 2025',
@@ -200,6 +220,8 @@ export const blogData: BlogPost[] = [
   {
     id: 10,
     title: 'China – National Reform: Enhancing Drug and Medical Device Regulation for High-Quality Pharmaceutical Development',
+    slug: 'china-national-reform-drug-medical-device-regulation-pharmaceutical-development',
+    metaDescription: 'China comprehensive reforms strengthen drug and medical device regulation to promote high-quality pharmaceutical industry growth and innovation.',
     excerpt: 'China is undertaking comprehensive reforms in the regulation of drugs and medical devices to promote high-quality growth of its pharmaceutical industry. The government aims to strengthen innovation, streamline regulatory processes, and ensure safety, efficacy, and accessibility.',
     author: 'Regulatory Intelligence Team',
     date: 'March 2025',
@@ -221,6 +243,8 @@ export const blogData: BlogPost[] = [
   {
     id: 11,
     title: 'South Korea – MFDS: Draft Amendments to the Digital Medical Devices Act',
+    slug: 'south-korea-mfds-draft-amendments-digital-medical-devices-act',
+    metaDescription: 'South Korea MFDS draft amendments strengthen digital medical device regulation, ensuring safety, efficacy, and innovation in digital healthcare.',
     excerpt: 'South Korea\'s Ministry of Food and Drug Safety (MFDS) has announced draft amendments to the Enforcement Rules of the Digital Medical Devices Act following the enactment of the Act in January 2024.',
     author: 'Regulatory Intelligence Team',
     date: 'February 2025',
@@ -242,6 +266,8 @@ export const blogData: BlogPost[] = [
   {
     id: 12,
     title: 'AI-Driven Document Automation: Transforming Regulatory Submissions',
+    slug: 'ai-driven-document-automation-regulatory-submissions',
+    metaDescription: 'AI-powered document automation revolutionizes regulatory submissions by reducing errors, improving consistency, and accelerating approval timelines.',
     excerpt: 'Artificial intelligence is revolutionizing regulatory submissions in the life sciences industry. By automating document creation, review, and formatting, AI-powered platforms reduce human errors, improve consistency, and accelerate approval timelines.',
     author: 'AI-ML Team',
     date: 'January 2025',
@@ -254,6 +280,8 @@ export const blogData: BlogPost[] = [
   {
     id: 13,
     title: 'The Future of GMP Compliance: AI-Powered Quality Management',
+    slug: 'future-gmp-compliance-ai-powered-quality-management',
+    metaDescription: 'AI is transforming GMP compliance in pharmaceutical and life sciences organizations through automated quality assurance, predictive risk management, and enhanced regulatory readiness.',
     excerpt: 'Artificial intelligence (AI) is no longer just a futuristic concept—it\'s actively transforming the way pharmaceutical and life sciences organizations manage Good Manufacturing Practice (GMP) compliance.',
     author: 'Quality Assurance & AI-ML Team',
     date: 'December 2024',
@@ -266,6 +294,8 @@ export const blogData: BlogPost[] = [
   {
     id: 14,
     title: 'Digital Transformation in Life Sciences: A Roadmap to Success',
+    slug: 'digital-transformation-life-sciences-roadmap-success',
+    metaDescription: 'Digital transformation roadmap for life sciences companies to streamline operations, improve regulatory compliance, and accelerate time-to-market for innovative therapies.',
     excerpt: 'Digital transformation is reshaping the life sciences industry, enabling companies to streamline operations, improve regulatory compliance, and accelerate time-to-market for innovative therapies.',
     author: 'IT Strategy Team',
     date: 'September 2024',

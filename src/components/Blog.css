@@ -298,6 +298,103 @@
   }
 }
 
+/* Blog Navigation - Independent Styles */
+.blog-navigation {
+  margin: 2rem 0;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color, #e5e7eb);
+}
+
+.blog-back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: #1e82c9;
+  color: #ffffff !important;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-back-button:hover {
+  background: #1e82c9;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 12px rgba(59, 130, 246, 0.2);
+  color: #ffffff !important;
+  text-decoration: none;
+}
+
+.blog-back-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.1);
+}
+
+.blog-back-button:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.blog-back-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.blog-back-button:hover::before {
+  left: 100%;
+}
+
+/* Blog Article Navigation */
+.blog-article-navigation {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--bg-secondary, #f8fafc);
+  border-radius: 0.75rem;
+  border: 1px solid var(--border-color, #e5e7eb);
+}
+
+.blog-article-navigation .blog-back-button {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  box-shadow: 0 4px 6px rgba(99, 102, 241, 0.1);
+}
+
+.blog-article-navigation .blog-back-button:hover {
+  background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%);
+  box-shadow: 0 8px 12px rgba(99, 102, 241, 0.2);
+}
+
+/* Override any conflicting styles */
+.blog-back-button,
+.blog-back-button:hover,
+.blog-back-button:focus,
+.blog-back-button:active {
+  font-family: inherit !important;
+  line-height: 1.5 !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  user-select: none !important;
+}
+
+/* Ensure visibility in all contexts */
+.blog-article .blog-back-button,
+.blog-page .blog-back-button {
+  z-index: 10;
+  position: relative;
+}
+
 @media (max-width: 480px) {
   .blog-hero {
     padding: 2rem 1rem;
@@ -311,5 +408,15 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
+  }
+
+  .blog-back-button {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.875rem;
+  }
+
+  .blog-article-navigation {
+    margin: 1rem 0;
+    padding: 1rem;
   }
 }

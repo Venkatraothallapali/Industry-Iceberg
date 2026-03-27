@@ -1,9 +1,20 @@
 import type { FC } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { usePageMetaManager } from '../hooks/usePageMetaManager'
 import './ECTDAI.css'
 
 const ECTDAI: FC = () => {
   const navigate = useNavigate()
+  
+  // Set meta tags for this page
+  usePageMetaManager({
+    title: "ECTD AI | Industry Iceberg",
+    description: "AI-powered Electronic Common Technical Document (ECTD) submission and management solutions for pharmaceutical companies. Our ECTD AI platform automates document preparation, regulatory compliance checks, and submission workflows for FDA, EMA, and global health authorities.",
+    ogTitle: "ECTD AI | Industry Iceberg",
+    ogDescription: "AI-powered Electronic Common Technical Document (ECTD) submission and management solutions for pharmaceutical companies. Our ECTD AI platform automates document preparation, regulatory compliance checks, and submission workflows for FDA, EMA, and global health authorities.",
+    twitterTitle: "ECTD AI | Industry Iceberg",
+    twitterDescription: "AI-powered Electronic Common Technical Document (ECTD) submission and management solutions for pharmaceutical companies. Our ECTD AI platform automates document preparation, regulatory compliance checks, and submission workflows for FDA, EMA, and global health authorities."
+  })
 
   return (
     <div className="ectdai-page">

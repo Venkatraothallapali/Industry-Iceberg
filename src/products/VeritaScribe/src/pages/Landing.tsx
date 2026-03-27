@@ -106,11 +106,11 @@ const Landing: React.FC = () => {
           <div className="hero-buttons">
             <button
               type="button"
-              className="btn-primary"
+              className="veritascribe-see-templates-btn"
               onClick={() => navigate("templates")}
             >
               See Templates
-              <FaRocket className="btn-icon" />
+              <FaRocket className="veritascribe-see-templates-btn-icon" />
             </button>
           </div>
         </div>

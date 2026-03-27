@@ -1,9 +1,20 @@
 import type { FC } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { usePageMetaManager } from '../hooks/usePageMetaManager'
 import './GMPCompliance.css'
 
 const ComplaintSiteSearch: FC = () => {
   const navigate = useNavigate();
+  
+  // Set meta tags for this page
+  usePageMetaManager({
+    title: "Complaint Site Search | Industry Iceberg",
+    description: "Comprehensive complaint site search and regulatory compliance monitoring for pharmaceutical and medical device companies. Our platform tracks FDA, EMA, and global regulatory agency communications for proactive compliance management.",
+    ogTitle: "Complaint Site Search | Industry Iceberg",
+    ogDescription: "Comprehensive complaint site search and regulatory compliance monitoring for pharmaceutical and medical device companies. Our platform tracks FDA, EMA, and global regulatory agency communications for proactive compliance management.",
+    twitterTitle: "Complaint Site Search | Industry Iceberg",
+    twitterDescription: "Comprehensive complaint site search and regulatory compliance monitoring for pharmaceutical and medical device companies. Our platform tracks FDA, EMA, and global regulatory agency communications for proactive compliance management."
+  })
 
   const handleSeeProduct = () => {
     navigate('/compliance-loop');

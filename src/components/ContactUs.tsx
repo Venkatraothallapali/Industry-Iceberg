@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import type { FC, FormEvent } from 'react'
 import './ContactUs.css'
+import { trackFormSubmission } from '../utils/analytics'
 
 const ContactUs: FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -27,6 +28,16 @@ const ContactUs: FC = () => {
       if (response.ok) {
         setSubmitStatus('success')
         form.reset()
+        
+        // Track successful form submission
+        trackFormSubmission('Contact Form', {
+          full_name: data.fullName,
+          company_name: data.companyName,
+          business_email: data.businessEmail,
+          message_length: typeof data.message === 'string' ? data.message.length : 0,
+          form_location: 'contact_page',
+          submission_method: 'api'
+        })
       } else {
         setSubmitStatus('error')
       }
@@ -63,6 +74,13 @@ const ContactUs: FC = () => {
               Share a few details about your organization and objectives. Our team will respond
               within one to two business days with the next best step.
             </p>
+            <div className="contact-form-image">
+              <img 
+                src="/assets/contact-bottom-ii.png" 
+                alt="Contact Support" 
+                className="contact-form-image-img"
+              />
+            </div>
           </div>
 
           <form className="contact-form" onSubmit={handleSubmit}>

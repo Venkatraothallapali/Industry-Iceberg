@@ -1,0 +1,207 @@
+/* CompliSense Navbar Styles - Prefixed to avoid conflicts */
+
+/* Main Navigation Container */
+.complisense-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+  backdrop-filter: blur(24px);
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.complisense-navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem 0 1rem 0.75rem;
+}
+
+.complisense-navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+}
+
+/* Logo Section */
+.complisense-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.complisense-logo-container {
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  padding: 0.5rem;
+  margin-left: 1rem;
+}
+
+.complisense-logo-container:hover {
+  transform: scale(1.1);
+}
+
+.complisense-logo-image {
+  object-fit: contain;
+}
+
+/* Navigation Items */
+.complisense-nav-items {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.complisense-nav-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  border-bottom: 2px;
+  text-decoration: none;
+  color: #374151;
+}
+
+.complisense-nav-link:hover {
+  color: #1e82c9;
+  border-color: #1e82c9;
+}
+
+.complisense-nav-link-active {
+  color: #1e82c9;
+  border-color: #1e82c9;
+}
+
+.complisense-nav-link-text {
+  font-size: 1.125rem;
+}
+
+/* Glass Effect Enhancement */
+@supports (backdrop-filter: blur(24px)) {
+  .complisense-navbar {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+}
+
+@supports not (backdrop-filter: blur(24px)) {
+  .complisense-navbar {
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid rgba(229, 231, 235, 0.8);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .complisense-navbar-container {
+    padding: 0 1rem;
+  }
+  
+  .complisense-navbar-content {
+    height: 4rem;
+  }
+  
+  .complisense-nav-link {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+  }
+  
+  .complisense-nav-link-text {
+    font-size: 1rem;
+  }
+  
+  .complisense-logo-container {
+    padding: 0.375rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .complisense-nav-items {
+    gap: 0.25rem;
+  }
+  
+  .complisense-nav-link {
+    padding: 0.375rem 0.625rem;
+  }
+  
+  .complisense-nav-link-text {
+    display: none;
+  }
+  
+  .complisense-logo-container {
+    transform: scale(0.9);
+  }
+  
+  .complisense-logo-container:hover {
+    transform: scale(1);
+  }
+}
+
+/* Focus and Accessibility - Remove blue box */
+.complisense-nav-link:focus {
+  outline: none;
+  outline-offset: 0;
+}
+
+.complisense-logo-link:focus {
+  outline: none;
+  outline-offset: 0;
+}
+
+/* Animation States */
+.complisense-nav-link {
+  position: relative;
+  overflow: hidden;
+}
+
+.complisense-nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #1e82c9;
+  transition: width 0.3s ease;
+  display:inline-block
+}
+
+.complisense-nav-link:hover::before {
+  width: 100%;
+}
+
+.complisense-nav-link-active::before {
+  width: 100%;
+}
+
+/* Print Styles */
+@media print {
+  .complisense-navbar {
+    position: static;
+    background: white;
+    border-bottom: 1px solid #000;
+  }
+  
+  .complisense-logo-link {
+    transform: none;
+  }
+  
+  .complisense-logo-container:hover {
+    transform: none;
+  }
+  
+  .complisense-nav-link:hover {
+    color: #374151;
+    border-color: transparent;
+  }
+}

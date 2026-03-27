@@ -91,8 +91,6 @@ const ProductsShowcase: FC = () => {
             <a 
               href={CompliSense}
               className="product-link"
-              target="_blank"
-              rel="noopener noreferrer"
             >
               Learn More →
             </a>

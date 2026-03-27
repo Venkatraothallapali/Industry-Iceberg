@@ -3,10 +3,21 @@ import { useState, FormEvent, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Blog.css'
 import { blogData } from './blogData'
+import { usePageMetaManager } from '../hooks/usePageMetaManager'
 
 const Blog: FC = () => {
   const navigate = useNavigate()
   const [email, setEmail] = useState('')
+
+  // Set proper meta tags for blog listing page
+  usePageMetaManager({
+    title: "Blog | Industry Iceberg",
+    description: "Read the latest insights on regulatory compliance, AI in life sciences, and industry innovations from the Industry Iceberg team.",
+    ogTitle: "Blog | Industry Iceberg",
+    ogDescription: "Read the latest insights on regulatory compliance, AI in life sciences, and industry innovations from the Industry Iceberg team.",
+    twitterTitle: "Blog | Industry Iceberg",
+    twitterDescription: "Read the latest insights on regulatory compliance, AI in life sciences, and industry innovations from the Industry Iceberg team."
+  })
 
   // Scroll to top when component mounts
   useEffect(() => {
@@ -61,11 +72,11 @@ const Blog: FC = () => {
                     <span className="blog-post-date">{post.date}</span>
                   </div>
                   <a 
-                    href={`/blog/${post.id}`}
+                    href={`/blog/${post.slug}`}
                     className="blog-read-more"
                     onClick={(e) => {
                       e.preventDefault()
-                      navigate(`/blog/${post.id}`)
+                      navigate(`/blog/${post.slug}`)
                     }}
                   >
                     Read More →

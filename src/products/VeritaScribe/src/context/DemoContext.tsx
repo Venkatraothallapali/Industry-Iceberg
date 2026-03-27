@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, useCallback, ReactNode } from 'react';
 import { Template, DataSource} from '../data/mockTemplates';
 
 interface DemoState {
@@ -75,43 +75,43 @@ export function DemoProvider({ children }: { children: ReactNode }) {
     }
   }, [state]);
 
-  const setSelectedTemplate = (template: Template | null) => {
+  const setSelectedTemplate = useCallback((template: Template | null) => {
     setState(prev => ({ ...prev, selectedTemplate: template }));
-  };
+  }, []);
 
-  const setDataSource = (data: DataSource[]) => {
+  const setDataSource = useCallback((data: DataSource[]) => {
     setState(prev => ({ ...prev, dataSource: data }));
-  };
+  }, []);
 
-  const setFilledDocument = (doc: string) => {
+  const setFilledDocument = useCallback((doc: string) => {
     setState(prev => ({ ...prev, filledDocument: doc }));
-  };
+  }, []);
 
-  const setOriginalDocument = (doc: string) => {
+  const setOriginalDocument = useCallback((doc: string) => {
     setState(prev => ({ ...prev, originalDocument: doc }));
-  };
+  }, []);
 
-  const toggleGuidedDemo = () => {
+  const toggleGuidedDemo = useCallback(() => {
     setState(prev => ({ ...prev, guidedDemoMode: !prev.guidedDemoMode }));
-  };
+  }, []);
 
-  const addChange = (change: Omit<Change, 'id' | 'timestamp'>) => {
+  const addChange = useCallback((change: Omit<Change, 'id' | 'timestamp'>) => {
     const newChange: Change = {
       ...change,
       id: Date.now().toString(),
       timestamp: new Date(),
     };
     setState(prev => ({ ...prev, changes: [...prev.changes, newChange] }));
-  };
+  }, []);
 
-  const updateDataSourceField = (fieldName: string, value: string) => {
+  const updateDataSourceField = useCallback((fieldName: string, value: string) => {
     setState(prev => ({
       ...prev,
       dataSource: prev.dataSource.map(d =>
         d.fieldName === fieldName ? { ...d, value } : d
       ),
     }));
-  };
+  }, []);
 
   return (
     <DemoContext.Provider

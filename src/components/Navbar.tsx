@@ -5,6 +5,7 @@ import './Navbar.css'
 import { Compliance_Loop } from '../config'
 import { CompliSense } from '../config'
 import { Veritascribe } from '../config'
+import { trackButtonClick } from '../utils/analytics'
 
 interface DropdownItem {
   label: string
@@ -28,7 +29,7 @@ const Navbar: FC = () => {
 
   const solutionsMenu: DropdownItem[] = [
     { label: 'Compliance Loop', href:Compliance_Loop },
-    { label: 'CompliSense', href:CompliSense },
+    { label: 'CompliSense', href: CompliSense },
     { label: 'VeritaScribe', href:Veritascribe },
     { label: 'Live LMS-Videobased', href: '/live-lms' },
     { label: 'ECTD AI', href: '/ectd-ai' }
@@ -238,22 +239,30 @@ const Navbar: FC = () => {
           
           <div className="nav-actions">
             <a 
-              href="https://pharma.industryiceberg.com/"
-              className="nav-link"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              ii Sign In
-            </a>
-            <a 
               href="/contact-us"
               className="nav-link contact-btn"
               onClick={(e) => {
                 e.preventDefault()
+                trackButtonClick('Contact Us', 'Contact Us', { location: 'navbar' })
                 navigate('/contact-us')
               }}
             >
               Contact Us
+            </a>
+            <a 
+              href="https://pharma.industryiceberg.com/"
+              className="nav-link signin-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => {
+                trackButtonClick('Sign In', 'ii Sign In', { 
+                  location: 'navbar',
+                  external_link: true,
+                  destination: 'https://pharma.industryiceberg.com/'
+                })
+              }}
+            >
+              ii Sign In
             </a>
           </div>
         </div>

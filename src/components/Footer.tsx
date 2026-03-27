@@ -67,7 +67,7 @@ const Footer: FC = () => {
             <h3 className="footer-heading">Products</h3>
             <ul className="footer-links">
               <li><Link to={Compliance_Loop}>Compliance Loop</Link></li>
-              <li><a href={CompliSense} target="_blank" rel="noopener noreferrer">CompliSense</a></li>
+              <li><Link to={CompliSense}>CompliSense</Link></li>
               <li><Link to={Veritascribe}>VeritaScribe</Link></li>
               <li><Link to="/live-lms">Live LMS-Videobased</Link></li>
               <li><Link to="/ectd-ai">ECTD AI</Link></li>

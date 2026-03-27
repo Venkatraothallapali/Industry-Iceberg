@@ -30,43 +30,13 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  /* Scroll to service section */
-  const scrollToService = (serviceId: string) => {
-    const el = document.getElementById(`service-${serviceId}`)
-    if (!el) return
-
-    const rect = el.getBoundingClientRect()
-    const absoluteTop = rect.top + window.scrollY
-
-    window.scrollTo({
-      top: absoluteTop - 100,
-      behavior: "smooth",
-    })
-  }
-
   /* Handle service click */
   const handleServiceClick = (serviceId: string) => {
     setIsMobileMenuOpen(false)
-
-    if (location.pathname === "/compliance-loop/services") {
-      scrollToService(serviceId)
-    } else {
-      navigate("/compliance-loop/services", {
-        state: { scrollTo: serviceId },
-      })
-    }
+    
+    // Navigate to the specific service URL
+    navigate(`/compliance-loop/services/${serviceId}`)
   }
-
-  /* Handle scroll after navigation */
-  useEffect(() => {
-    if (location.pathname === "/compliance-loop/services" && location.state?.scrollTo) {
-      const serviceId = location.state.scrollTo
-
-      setTimeout(() => {
-        scrollToService(serviceId)
-      }, 200)
-    }
-  }, [location])
 
   return (
     <div className="compliance-loop-navbar">
@@ -131,13 +101,13 @@ const Navbar: React.FC = () => {
             {/* Contact */}
             <li>
               <Link
-                to="/compliance-loop/contact"
+                to="/compliance-loop/demo"
                 className={`nav-link ${
-                  location.pathname.includes("contact") ? "active" : ""
+                  location.pathname.includes("demo") || location.pathname.includes("contact") ? "active" : ""
                 }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Contact
+                Schedule a Demo
               </Link>
             </li>
 

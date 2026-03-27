@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { useParams } from 'react-router-dom'
 import { services, keyFeatures } from '../data/services'
 import type { Service } from '../types'
 import './Services.css'
@@ -10,45 +11,42 @@ const typedKeyFeatures: string[] = keyFeatures as any;
 
 const Services: React.FC = () => {
   const servicesRef = useRef<HTMLDivElement>(null)
+  const { serviceId } = useParams<{ serviceId?: string }>()
 
   useEffect(() => {
-    // On mount, either scroll to a specific service (if requested) or to top
-    const targetServiceId = (() => {
-      try {
-        return window.sessionStorage.getItem('scrollToService')
-      } catch {
-        return null
-      }
-    })()
+    // Helper to scroll with an offset so content isn't hidden behind the fixed navbar
+    const scrollToWithOffset = (element: HTMLElement, offset: number = 100) => {
+      const rect = element.getBoundingClientRect()
+      const absoluteTop = rect.top + window.scrollY
+      window.scrollTo({
+        top: absoluteTop - offset,
+        behavior: 'smooth',
+      })
+    }
 
-    setTimeout(() => {
-      // Helper to scroll with an offset so content isn't hidden behind the fixed navbar
-      const scrollToWithOffset = (element: HTMLElement, offset: number = 100) => {
-        const rect = element.getBoundingClientRect()
-        const absoluteTop = rect.top + window.scrollY
-        window.scrollTo({
-          top: absoluteTop - offset,
-          behavior: 'smooth',
-        })
-      }
-
-      if (targetServiceId) {
-        const el = document.getElementById(`service-${targetServiceId}`)
+    // Auto-scroll to service section if serviceId is present in URL
+    if (serviceId) {
+      setTimeout(() => {
+        const el = document.getElementById(serviceId)
         if (el) {
           scrollToWithOffset(el)
         } else {
-          window.scrollTo({ top: 0, behavior: 'smooth' })
+          // Fallback to old ID format if service not found
+          const fallbackEl = document.getElementById(`service-${serviceId}`)
+          if (fallbackEl) {
+            scrollToWithOffset(fallbackEl)
+          } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+          }
         }
-        try {
-          window.sessionStorage.removeItem('scrollToService')
-        } catch {
-          // ignore
-        }
-      } else {
+      }, 150)
+    } else {
+      // Scroll to top if no specific service
+      setTimeout(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' })
-      }
-    }, 150)
-  }, [])
+      }, 150)
+    }
+  }, [serviceId])
 
   return (
     <>
@@ -69,7 +67,7 @@ const Services: React.FC = () => {
       <div className="container">
         <div className="services-list-container" ref={servicesRef}>
             {typedServices.map((service: Service, index: number) => (
-              <div key={service.id} id={`service-${service.id}`} className="service-card">
+              <div key={service.id} id={service.id} className="service-card">
                 <div className="service-card-header">
                   <span className="service-number">{index + 1}</span>
                   <h2 className="service-title">{service.title}</h2>

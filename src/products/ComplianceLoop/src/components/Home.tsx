@@ -242,11 +242,11 @@ const Home: React.FC = () => {
 
               }}>Services</a>
 
-              <a href="/compliance-loop/contact" className="compliance-loop-footer-link" onClick={(e) => {
+              <a href="/compliance-loop/demo" className="compliance-loop-footer-link" onClick={(e) => {
 
                 e.preventDefault();
 
-                navigate('/compliance-loop/contact');
+                navigate('/compliance-loop/demo');
 
                 window.scrollTo({ top: 0, behavior: 'smooth' });
 

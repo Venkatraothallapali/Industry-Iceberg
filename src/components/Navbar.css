@@ -142,6 +142,32 @@
   border: none;
 }
 
+.nav-link.signin-btn {
+  background: var(--primary-blue);
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(30, 130, 201, 0.3);
+}
+
+.nav-link.signin-btn:hover {
+  background: #1a6fb3;
+  color: white;
+  box-shadow: 0 4px 12px rgba(30, 130, 201, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Remove underline for signin button */
+.nav-link.signin-btn::after {
+  display: none;
+}
+
+.nav-link.signin-btn:hover::after {
+  display: none;
+}
+
 /* 1. Ensure the container spans the full height of the navbar */
 .nav-dropdown {
   position: relative;

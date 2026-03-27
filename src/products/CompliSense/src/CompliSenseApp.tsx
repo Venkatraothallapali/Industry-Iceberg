@@ -1,34 +1,31 @@
-import { Routes, Route, Navigate, useLocation } from "react-router-dom"
-import Navbar from './components/Navbar'
-import Dashboard from './components/pages/Dashboard'
-import RequestDemo from './components/pages/RequestDemo'
-import Login from './components/pages/Login'
-import ObservationAnalysis from './components/pages/ObservationAnalysis'
-import Home from './components/pages/Home'
-import './App.css'
+import { Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import Navbar from './components/ComplisenseNavbar';
+import Dashboard from './pages/ComplisenseDashboard';
+import RequestDemo from './pages/ComplisenseRequestDemo';
+import Login from './pages/ComplisenseLogin';
+import ObservationAnalysis from './pages/ComplisenseObservationAnalysis';
+import './ComplisenseApp.css';
+import { useProductPageMeta } from '../../../hooks/useProductPageMeta';
 
-function CompliSenseAppContent() {
-  const location = useLocation()
-  const currentPath = location.pathname.split('/').pop()
-  const hideNavbar = currentPath === 'request-demo'
+function App() {
+  const location = useLocation();
+  const hideNavbar = location.pathname.endsWith('/request-demo');
+
+  // Use product-specific meta tags for all CompliSense pages
+  useProductPageMeta();
 
   return (
-    <div className="complisense-app min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50" style={{
-      background: 'linear-gradient(to bottom right, rgb(248 250 252), rgb(239 246 255), rgb(224 231 255))'
-    }}>
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {!hideNavbar && <Navbar />}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Navigate to="dashboard" replace />} />
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="request-demo" element={<RequestDemo />} />
         <Route path="login" element={<Login />} />
         <Route path="observation-analysis" element={<ObservationAnalysis />} />
-        <Route path="*" element={<Navigate to="" replace />} />
       </Routes>
     </div>
-  )
+  );
 }
 
-export default function CompliSenseApp() {
-  return <CompliSenseAppContent />
-}
+export default App;

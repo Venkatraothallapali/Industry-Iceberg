@@ -1,9 +1,20 @@
 import type { FC } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { usePageMetaManager } from '../hooks/usePageMetaManager'
 import './VideoCreationService.css'
 
 const VideoCreationService: FC = () => {
   const navigate = useNavigate()
+  
+  // Set meta tags for this page
+  usePageMetaManager({
+    title: "Video Creation Service | Industry Iceberg",
+    description: "Professional video creation services for life sciences and healthcare organizations. We produce engaging medical videos, training content, and marketing materials that comply with regulatory standards and effectively communicate complex scientific concepts.",
+    ogTitle: "Video Creation Service | Industry Iceberg",
+    ogDescription: "Professional video creation services for life sciences and healthcare organizations. We produce engaging medical videos, training content, and marketing materials that comply with regulatory standards and effectively communicate complex scientific concepts.",
+    twitterTitle: "Video Creation Service | Industry Iceberg",
+    twitterDescription: "Professional video creation services for life sciences and healthcare organizations. We produce engaging medical videos, training content, and marketing materials that comply with regulatory standards and effectively communicate complex scientific concepts."
+  })
   
   return (
     <div className="video-service-page">

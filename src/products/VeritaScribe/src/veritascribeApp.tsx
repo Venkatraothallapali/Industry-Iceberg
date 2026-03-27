@@ -10,12 +10,16 @@ import DocumentPreview from "./pages/DocumentPreview"
 import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import "./styles/landing.css"
+import { useProductPageMeta } from "../../../hooks/useProductPageMeta"
 
 export default function App() {
+  // Use product-specific meta tags for all VeritaScribe pages
+  useProductPageMeta()
+  
   return (
     <div className="veritascribe-app">
       <DemoProvider>
-      
+        
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="templates" element={<TemplateSelection />} />

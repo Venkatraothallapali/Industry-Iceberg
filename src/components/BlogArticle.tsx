@@ -3,17 +3,31 @@ import { useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import './BlogArticle.css'
 import { blogData } from './blogData'
+import { usePageMetaManager } from '../hooks/usePageMetaManager'
 
 const BlogArticle: FC = () => {
-  const { id } = useParams<{ id: string }>()
+  const { slug, id } = useParams<{ slug?: string; id?: string }>()
   const navigate = useNavigate()
-  const articleId = id ? parseInt(id, 10) : null
-  const article = articleId ? blogData.find(post => post.id === articleId) : null
+  
+  // Try to find by slug first, fallback to ID for backward compatibility
+  const article = slug 
+    ? blogData.find(post => post.slug === slug)
+    : blogData.find(post => post.id === parseInt(id || '0', 10))
 
-  // Scroll to top when component mounts or article ID changes
+  // Scroll to top when component mounts or slug changes
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
-  }, [id])
+  }, [slug])
+
+  // Use SEO meta manager for title, meta tags, and GA tracking
+  usePageMetaManager(article ? {
+    title: `${article.title} | Industry Iceberg`,
+    description: article.metaDescription,
+    ogTitle: `${article.title} | Industry Iceberg`,
+    ogDescription: article.metaDescription,
+    twitterTitle: `${article.title} | Industry Iceberg`,
+    twitterDescription: article.metaDescription
+  } : {})
 
   if (!article) {
     return (
@@ -27,7 +41,7 @@ const BlogArticle: FC = () => {
                 window.scrollTo({ top: 0, behavior: 'auto' })
               }, 0)
             }} 
-            className="back-button"
+            className="blog-back-button"
           >
             Back to Blog
           </button>
@@ -110,7 +124,7 @@ const BlogArticle: FC = () => {
                   window.scrollTo({ top: 0, behavior: 'auto' })
                 }, 0)
               }} 
-              className="back-button"
+              className="blog-back-button"
             >
               ← Back to Blog
             </button>

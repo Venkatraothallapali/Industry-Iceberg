@@ -398,3 +398,123 @@
     font-size: 1.5rem;
   }
 }
+
+/* AI Capabilities Subtitle - Independent styling to avoid conflicts */
+.ai-technologies-header-subtitle-ai-capabilities {
+  font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+  line-height: 1.6;
+  /* max-width: 900px; */
+  margin: 1.5rem auto 2rem auto;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 400;
+  text-align: center;
+  font-family: inherit;
+  letter-spacing: 0.01em;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Ensure no inheritance conflicts */
+.ai-technologies-header-subtitle-ai-capabilities,
+.ai-technologies-header-subtitle-ai-capabilities * {
+  color: rgba(255, 255, 255, 0.95) !important;
+  font-family: inherit !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+  text-align: center !important;
+}
+
+/* Responsive adjustments for two-line layout */
+@media (max-width: 768px) {
+  .ai-technologies-header-subtitle-ai-capabilities {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    margin: 1rem auto 1.5rem auto;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-technologies-header-subtitle-ai-capabilities {
+    font-size: 0.95rem;
+    margin: 0.8rem auto 1.2rem auto;
+    line-height: 1.4;
+  }
+}
+
+/* AI Model Request Consultation Button - Independent blue styling to avoid conflicts */
+.ai-model-request-consultation-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: inherit;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #1e82c9;
+  color: white;
+  box-shadow: 0 4px 12px rgba(30, 130, 201, 0.3);
+  position: relative;
+  overflow: hidden;
+  outline: none;
+}
+
+.ai-model-request-consultation-btn:hover {
+  background: #1a6fb3;
+  color: white;
+  box-shadow: 0 6px 20px rgba(30, 130, 201, 0.4);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.ai-model-request-consultation-btn:active {
+  background: #155a8f;
+  color: white;
+  box-shadow: 0 3px 10px rgba(30, 130, 201, 0.3);
+  transform: translateY(0);
+}
+
+.ai-model-request-consultation-btn:focus {
+  outline: 2px solid #1e82c9;
+  outline-offset: 2px;
+}
+
+/* Ensure no inheritance conflicts */
+.ai-model-request-consultation-btn,
+.ai-model-request-consultation-btn:hover,
+.ai-model-request-consultation-btn:active,
+.ai-model-request-consultation-btn:focus {
+  background-color: #1e82c9 !important;
+  color: white !important;
+  border: none !important;
+  font-family: inherit !important;
+  text-decoration: none !important;
+}
+
+.ai-model-request-consultation-btn:hover {
+  background-color: #1a6fb3 !important;
+}
+
+.ai-model-request-consultation-btn:active {
+  background-color: #155a8f !important;
+}
+
+/* Responsive adjustments for button */
+@media (max-width: 768px) {
+  .ai-model-request-consultation-btn {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-model-request-consultation-btn {
+    padding: 0.625rem 1.5rem;
+    font-size: 0.95rem;
+    width: 100%;
+    max-width: 280px;
+  }
+}

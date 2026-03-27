@@ -1,4 +1,4 @@
-import React, { useState, useLayoutEffect } from 'react';
+import React, { useState, useLayoutEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaArrowRight, FaFileAlt } from 'react-icons/fa';
 import { useDemo } from '../context/DemoContext';
@@ -10,6 +10,7 @@ const TemplateSelection: React.FC = () => {
   const navigate = useNavigate();
   const { setSelectedTemplate } = useDemo();
   const [selected, setSelected] = useState<Template | null>(null);
+  const hasMounted = useRef(false);
 
   // Debug: Check if templates are loading
   console.log('TemplateSelection component mounted');
@@ -17,12 +18,14 @@ const TemplateSelection: React.FC = () => {
   console.log('Templates data:', templates);
 
   // Reset selected template when component mounts (navigating back to template page)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-
+  // Use ref to ensure this only runs once on mount, preventing infinite loops
   useLayoutEffect(() => {
-    setSelected(null);
-    setSelectedTemplate(null);
-}, []);
+    if (!hasMounted.current) {
+      setSelected(null);
+      setSelectedTemplate(null);
+      hasMounted.current = true;
+    }
+  }, [setSelectedTemplate]);
 
   const handleSelect = (template: Template) => {
     setSelected(template);

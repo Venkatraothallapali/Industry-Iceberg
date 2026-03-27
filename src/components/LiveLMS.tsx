@@ -1,7 +1,18 @@
-import { FC, useEffect, useState } from 'react';import { useNavigate } from 'react-router-dom'
+import { FC, useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { usePageMetaManager } from '../hooks/usePageMetaManager'
 import './LiveLMS.css'
 
 const LiveLMS: FC = () => {
+  // Set meta tags for this page
+  usePageMetaManager({
+    title: "Live LMS | Industry Iceberg",
+    description: "Live Learning Management System for healthcare and life sciences organizations. Our LMS platform delivers interactive training, compliance education, and professional development with real-time tracking and regulatory compliance features.",
+    ogTitle: "Live LMS | Industry Iceberg",
+    ogDescription: "Live Learning Management System for healthcare and life sciences organizations. Our LMS platform delivers interactive training, compliance education, and professional development with real-time tracking and regulatory compliance features.",
+    twitterTitle: "Live LMS | Industry Iceberg",
+    twitterDescription: "Live Learning Management System for healthcare and life sciences organizations. Our LMS platform delivers interactive training, compliance education, and professional development with real-time tracking and regulatory compliance features."
+  })
   const navigate = useNavigate()
   const [showVideo, setShowVideo] = useState(false)
 

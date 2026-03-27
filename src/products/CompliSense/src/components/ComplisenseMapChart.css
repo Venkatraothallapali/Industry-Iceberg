@@ -1,0 +1,231 @@
+/* CompliSense MapChart Styles - Prefixed to avoid conflicts */
+
+/* Main Map Container */
+.complisense-map-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.complisense-map-wrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  position: relative;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+/* Map Geography Styles */
+.complisense-map-geography {
+  fill: #E5E7EB;
+  stroke: #9CA3AF;
+  outline: none;
+}
+
+.complisense-map-geography:hover {
+  fill: #D1D5DB;
+  outline: none;
+}
+
+.complisense-map-geography:pressed {
+  outline: none;
+}
+
+/* Map Markers */
+.complisense-map-marker-group {
+  cursor: pointer;
+  outline: none;
+}
+
+.complisense-map-marker-circle {
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.complisense-map-marker-circle:hover {
+  opacity: 1;
+}
+
+.complisense-map-marker-circle-active {
+  opacity: 1;
+}
+
+/* Tooltip Styles */
+.complisense-map-tooltip {
+  position: absolute;
+  pointer-events: none;
+}
+
+.complisense-map-tooltip-rect {
+  fill: white;
+  stroke: #1e82c9;
+  stroke-width: 1;
+  rx: 4;
+}
+
+.complisense-map-tooltip-text {
+  font-family: system-ui, -apple-system, sans-serif;
+  fill: #1F2937;
+  font-size: 10px;
+  font-weight: 700;
+  text-anchor: middle;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .complisense-map-wrapper {
+    min-height: 200px;
+  }
+  
+  .complisense-map-tooltip-text {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 480px) {
+  .complisense-map-wrapper {
+    min-height: 180px;
+  }
+  
+  .complisense-map-tooltip-text {
+    font-size: 8px;
+  }
+}
+
+/* Animation States */
+.complisense-map-marker-circle {
+  animation: complisense-map-pulse 2s ease-in-out infinite;
+}
+
+@keyframes complisense-map-pulse {
+  0% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+}
+
+/* Focus and Accessibility */
+.complisense-map-marker-group:focus {
+  outline: 2px solid #1e82c9;
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  .complisense-map-container {
+    break-inside: avoid;
+  }
+  
+  .complisense-map-wrapper {
+    min-height: 200px;
+  }
+  
+  .complisense-map-tooltip {
+    display: none;
+  }
+}
+
+/* Loading State */
+.complisense-map-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 350px;
+  background: #f9fafb;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+}
+
+.complisense-map-loading-text {
+  color: #6b7280;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Error State */
+.complisense-map-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 350px;
+  background: #fef2f2;
+  border-radius: 0.75rem;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+}
+
+.complisense-map-error-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.complisense-map-error-subtext {
+  font-size: 0.75rem;
+  color: #7f1d1d;
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .complisense-map-geography {
+    fill: #000000;
+    stroke: #ffffff;
+  }
+  
+  .complisense-map-geography:hover {
+    fill: #333333;
+  }
+  
+  .complisense-map-tooltip-rect {
+    fill: #ffffff;
+    stroke: #000000;
+    stroke-width: 2;
+  }
+  
+  .complisense-map-tooltip-text {
+    fill: #000000;
+    font-weight: 900;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .complisense-map-marker-circle {
+    animation: none;
+  }
+  
+  .complisense-map-marker-circle {
+    transition: opacity 0.1s ease;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .complisense-map-geography {
+    fill: #374151;
+    stroke: #6b7280;
+  }
+  
+  .complisense-map-geography:hover {
+    fill: #4b5563;
+  }
+  
+  .complisense-map-tooltip-rect {
+    fill: #1f2937;
+    stroke: #60a5fa;
+  }
+  
+  .complisense-map-tooltip-text {
+    fill: #f9fafb;
+  }
+}

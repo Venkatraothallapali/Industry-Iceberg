@@ -1,21 +1,33 @@
 import type { FC } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { usePageMetaManager } from '../hooks/usePageMetaManager'
 import './AiModelDevelopment.css'
 
 const AiModelDevelopment: FC = () => {
   const navigate = useNavigate()
+  
+  // Set meta tags for this page
+  usePageMetaManager({
+    title: "AI Model Development | Industry Iceberg",
+    description: "Custom AI model development services for healthcare and life sciences. We build machine learning models, neural networks, and AI solutions tailored to your specific regulatory compliance, drug discovery, and clinical research needs.",
+    ogTitle: "AI Model Development | Industry Iceberg",
+    ogDescription: "Custom AI model development services for healthcare and life sciences. We build machine learning models, neural networks, and AI solutions tailored to your specific regulatory compliance, drug discovery, and clinical research needs.",
+    twitterTitle: "AI Model Development | Industry Iceberg",
+    twitterDescription: "Custom AI model development services for healthcare and life sciences. We build machine learning models, neural networks, and AI solutions tailored to your specific regulatory compliance, drug discovery, and clinical research needs."
+  })
 
   return (
     <div className="ai-technologies-page">
       <header className="ai-technologies-header">
         <div className="ai-technologies-header-content">
           <h1 className="ai-technologies-header-title">AI Technologies & Solutions</h1>
-          <p className="ai-technologies-header-subtitle">
-            Advanced AI capabilities powered by Computer Vision, Natural Language Processing, Deep Learning, and Artificial Intelligence for enterprise transformation.
+          <p className="ai-technologies-header-subtitle-ai-capabilities">
+            Advanced AI capabilities powered by Computer Vision, Natural Language Processing,<br />
+            Deep Learning, and Artificial Intelligence for enterprise transformation.
           </p>
           <div className="hero-cta">
             <button
-              className="btn-primary"
+              className="ai-model-request-consultation-btn"
               onClick={() => navigate('/ai-model-demo')}
             >
               Request Consultation
