@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://industryiceberg.com/sitemap.xml
+
+# Allow search engines to crawl all important content
+Allow: /compliance-loop/
+Allow: /complisense/
+Allow: /veritascribe/
+Allow: /compliance-loop/services/
+Allow: /blog/
+Allow: /contact/
+
+# Block unnecessary directories
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*.xml$
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
