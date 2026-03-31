@@ -121,7 +121,7 @@ const DemoModal: React.FC<DemoModalProps> = ({ onClose }) => {
           <div className="flex items-center justify-center gap-3 mb-4">
             <img
               src={favicon}
-              alt="VeritaScribe"
+              alt="Industry Iceberg VeritaScribe - AI-powered medical documentation and transcription demo modal"
               className="w-12 h-12 object-contain"
             />
             <span className="text-2xl font-bold bg-gradient-to-r from-pharma-blue to-pharma-teal bg-clip-text text-transparent">

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useCanonicalUrlWithPath } from '../../../../hooks/useCanonicalUrl';
 import { 
   BarChart, Bar, PieChart, Pie, Cell, LineChart, Line, XAxis, YAxis,
   CartesianGrid, Tooltip, Legend, ResponsiveContainer
@@ -483,6 +484,10 @@ const DUMMY_DATA = {
 
   const Dashboard = () => {
   const navigate = useNavigate();
+  
+  // Set canonical URL for CompliSense dashboard
+  useCanonicalUrlWithPath('/complisense/dashboard')
+  
   const [totalObservations, setTotalObservations] = useState<number | null>(null);
   const [totalCitesInspected, setTotalCitesInspected] = useState<number | null>(null);
   const [programAreaCounts, setProgramAreaCounts] = useState<ProgramAreaCounts | null>(null);
@@ -766,7 +771,11 @@ const DUMMY_DATA = {
   };
 
   return (
-    <div className="complisense-dashboard">
+    <div 
+      className="complisense-dashboard"
+      role="img"
+      aria-label="Industry Iceberg CompliSense dashboard - AI-powered FDA compliance management and regulatory automation platform for pharmaceutical companies"
+    >
       {/* CompliSense Branding - Between Navbar and Content */}
       <div className="complisense-dashboard-header">
         <div className="complisense-branding-container">

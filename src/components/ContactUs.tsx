@@ -52,7 +52,11 @@ const ContactUs: FC = () => {
   return (
     <main className="contact-page">
       {/* Hero Section */}
-      <section className="contact-hero">
+      <section 
+        className="contact-hero"
+        role="img"
+        aria-label="Industry Iceberg contact support team - professional regulatory compliance consulting and customer service for pharmaceutical and life sciences companies"
+      >
         <div className="contact-hero-overlay" />
         <div className="contact-hero-inner">
           <p className="contact-hero-kicker">We would love to hear from you</p>
@@ -77,7 +81,7 @@ const ContactUs: FC = () => {
             <div className="contact-form-image">
               <img 
                 src="/assets/contact-bottom-ii.png" 
-                alt="Contact Support" 
+                alt="Industry Iceberg contact support team - regulatory compliance consulting and customer service" 
                 className="contact-form-image-img"
               />
             </div>

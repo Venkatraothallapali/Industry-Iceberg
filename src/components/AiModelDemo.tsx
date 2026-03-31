@@ -82,7 +82,7 @@ const AiModelDemo: React.FC = () => {
       <nav className="demo-nav">
         <div className="demo-nav-container">
           <div className="demo-nav-brand" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
-            <img src="/assets/logo-cdoxsd3z.png" alt="Industry Iceberg Logo" className="demo-nav-logo" />
+            <img src="/assets/logo-cdoxsd3z.png" alt="Industry Iceberg - AI Model Development enterprise solutions platform" className="demo-nav-logo" />
             <span className="demo-nav-title">AI Technologies & Solutions</span>
           </div>
         </div>

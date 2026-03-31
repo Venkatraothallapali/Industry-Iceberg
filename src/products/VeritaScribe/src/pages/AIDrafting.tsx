@@ -6,12 +6,16 @@ const ECTDAI: FC = () => {
   const navigate = useNavigate()
   
   return (
-    <div className="veritascribe-page ectd-ai-page">
+    <div 
+      className="veritascribe-page ectd-ai-page"
+      role="img"
+      aria-label="Industry Iceberg VeritaScribe ECTD AI - AI-powered medical documentation, electronic submissions, and clinical trial transcription for healthcare"
+    >
       {/* Hero Section */}
       <section className="veritascribe-hero">
         <div className="hero-card">
           <div className="hero-logo" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
-            <img src="/assets/image.png" alt="Industry Iceberg Logo" />
+            <img src="/assets/image.png" alt="Industry Iceberg VeritaScribe - AI-powered medical documentation and clinical trial transcription" />
           </div>
         </div>
         <h1 className="hero-title">ECTD AI</h1>

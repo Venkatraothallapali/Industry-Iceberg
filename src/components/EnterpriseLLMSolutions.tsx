@@ -6,7 +6,11 @@ const EnterpriseLLMSolutions: FC = () => {
   const navigate = useNavigate()
 
   return (
-    <div className="enterprise-llm-page">
+    <div 
+      className="enterprise-llm-page"
+      role="img"
+      aria-label="Industry Iceberg Enterprise LLM Solutions - custom large language models, generative AI, and enterprise AI transformation for business"
+    >
       <header className="enterprise-llm-header">
         <div className="enterprise-llm-header-content">
           <h1 className="enterprise-llm-header-title">Enterprise LLM & Generative AI Solutions</h1>
@@ -202,45 +206,6 @@ const EnterpriseLLMSolutions: FC = () => {
                 <h3 className="enterprise-llm-use-case-title">Pharma</h3>
                 <p className="enterprise-llm-use-case-description">
                   Regulatory summarization, SOP assistance, and scientific literature navigation for R&amp;D and quality teams.
-                </p>
-              </div>
-
-              <div className="enterprise-llm-use-case-card">
-                <div className="enterprise-llm-use-case-icon">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 8C9.23858 8 7 10.2386 7 13C7 15.7614 9.23858 18 12 18C14.7614 18 17 15.7614 17 13C17 10.2386 14.7614 8 12 8Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M4 4H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-                <h3 className="enterprise-llm-use-case-title">Finance</h3>
-                <p className="enterprise-llm-use-case-description">
-                  Portfolio commentary, research summarisation, and risk documentation generation under governed templates.
-                </p>
-              </div>
-
-              <div className="enterprise-llm-use-case-card">
-                <div className="enterprise-llm-use-case-icon">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M16 21V19C16 16.7909 14.2091 15 12 15H7C4.79086 15 3 16.7909 3 19V21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M12 11C13.6569 11 15 9.65685 15 8C15 6.34315 13.6569 5 12 5C10.3431 5 9 6.34315 9 8C9 9.65685 10.3431 11 12 11Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-                <h3 className="enterprise-llm-use-case-title">HR & Recruitment</h3>
-                <p className="enterprise-llm-use-case-description">
-                  Role-aware assistants for policy queries, job description drafting, and candidate communication.
-                </p>
-              </div>
-
-              <div className="enterprise-llm-use-case-card">
-                <div className="enterprise-llm-use-case-icon">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 5H21V15H5L3 17V5Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M8 19H16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-                <h3 className="enterprise-llm-use-case-title">Customer Support</h3>
-                <p className="enterprise-llm-use-case-description">
-                  Multi-channel assistants that resolve queries, surface knowledge, and escalate cases with full context.
                 </p>
               </div>
 

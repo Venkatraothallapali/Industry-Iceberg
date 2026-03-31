@@ -85,7 +85,7 @@ const DemoPage: React.FC = () => {
           >
             <img
               src={logoImage}
-              alt="Compliance Loop"
+              alt="Industry Iceberg Compliance Loop - AI-driven regulatory compliance platform demo for life sciences companies"
               className="demo-nav-logo"
             />
             <span className="demo-nav-title">Compliance Loop</span>

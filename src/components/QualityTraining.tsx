@@ -10,7 +10,7 @@ const QualityTraining: FC = () => {
       <section className="gmp-hero">
         <div className="hero-card">
           <div className="hero-logo" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
-            <img src="/assets/image.png" alt="Industry Iceberg Logo" />
+            <img src="/assets/image.png" alt="Industry Iceberg - Quality training and compliance management for pharmaceutical companies" />
           </div>
         </div>
         <h1 className="hero-title">Quality Training</h1>

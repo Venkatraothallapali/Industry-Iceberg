@@ -5,7 +5,12 @@ const ValueProposition: FC = () => {
   const scrollingText = 'Cutting-Edge AI Solutions to Power Modern Enterprises'
 
   return (
-    <section id="who-we-are" className="value-proposition">
+    <section 
+      id="who-we-are" 
+      className="value-proposition"
+      role="img"
+      aria-label="Industry Iceberg Value Proposition - cutting-edge AI solutions, enterprise transformation, and modern business technology innovation"
+    >
       <div className="value-proposition-background">
         <div className="value-proposition-overlay"></div>
       </div>

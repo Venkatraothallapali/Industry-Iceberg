@@ -17,7 +17,11 @@ const AiModelDevelopment: FC = () => {
   })
 
   return (
-    <div className="ai-technologies-page">
+    <div 
+      className="ai-technologies-page"
+      role="img"
+      aria-label="Industry Iceberg AI Model Development - custom machine learning solutions, neural networks, and AI technologies for healthcare and life sciences enterprises"
+    >
       <header className="ai-technologies-header">
         <div className="ai-technologies-header-content">
           <h1 className="ai-technologies-header-title">AI Technologies & Solutions</h1>
@@ -196,33 +200,6 @@ const AiModelDevelopment: FC = () => {
                 <h3 className="ai-technologies-use-case-title">Healthcare & Life Sciences</h3>
                 <p className="ai-technologies-use-case-description">
                   Medical imaging, drug discovery, patient monitoring, and clinical trial optimization using advanced AI technologies.
-                </p>
-              </div>
-
-              <div className="ai-technologies-use-case-card">
-                <div className="ai-technologies-use-case-icon">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 5H21V9H3V5Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M3 15H21V19H3V15Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M7 9V15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M17 9V15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-                <h3 className="ai-technologies-use-case-title">Finance & Banking</h3>
-                <p className="ai-technologies-use-case-description">
-                  Risk assessment, fraud detection, algorithmic trading, and customer insights using AI-powered financial intelligence.
-                </p>
-              </div>
-
-              <div className="ai-technologies-use-case-card">
-                <div className="ai-technologies-use-case-icon">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 7H21M5 7V5H9V7M15 7V5H19V7M5 11H7M10 11H12M15 11H19M5 15H9M12 15H14M5 19H11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-                <h3 className="ai-technologies-use-case-title">Retail & E-commerce</h3>
-                <p className="ai-technologies-use-case-description">
-                  Recommendation systems, demand forecasting, and customer behavior analysis for personalized shopping experiences.
                 </p>
               </div>
             </div>

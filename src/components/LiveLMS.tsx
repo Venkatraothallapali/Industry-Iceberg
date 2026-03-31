@@ -34,7 +34,11 @@ const LiveLMS: FC = () => {
   }, [])
   
   return (
-    <div className="lms-page">
+    <div 
+      className="lms-page"
+      role="img"
+      aria-label="Industry Iceberg Live LMS - video-based learning management system for pharmaceutical compliance training and enterprise education"
+    >
       {/* Header */}
       <header className="lms-header">
         <div className="lms-header-content">

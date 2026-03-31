@@ -70,7 +70,7 @@ const ReviewPage: React.FC = () => {
           >
             <img
               src={favicon}
-              alt="VeritaScribe"
+              alt="Industry Iceberg VeritaScribe - AI-powered medical documentation review and editing platform"
               className="review-nav-logo"
             />
             <span className="review-nav-title">VeritaScribe</span>

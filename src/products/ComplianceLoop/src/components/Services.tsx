@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import { useParams } from 'react-router-dom'
 import { services, keyFeatures } from '../data/services'
+import { useCanonicalUrlWithPath } from '../../../../hooks/useCanonicalUrl'
 import type { Service } from '../types'
 import './Services.css'
 import Navbar from './Navbar'
@@ -12,6 +13,9 @@ const typedKeyFeatures: string[] = keyFeatures as any;
 const Services: React.FC = () => {
   const servicesRef = useRef<HTMLDivElement>(null)
   const { serviceId } = useParams<{ serviceId?: string }>()
+  
+  // Set canonical URL for services page
+  useCanonicalUrlWithPath('/complianceloop/services')
 
   useEffect(() => {
     // Helper to scroll with an offset so content isn't hidden behind the fixed navbar
@@ -51,7 +55,12 @@ const Services: React.FC = () => {
   return (
     <>
       <Navbar />
-      <section id="services" className="services-section">
+      <section 
+        id="services" 
+        className="services-section"
+        role="img"
+        aria-label="Industry Iceberg Compliance Loop Services - CMO, CDMO, CRO, preclinical, clinical, analytical testing, and stability warehouse regulatory compliance solutions"
+      >
       <div className="services-header-section">
         <div className="container">
           <div className="section-header">

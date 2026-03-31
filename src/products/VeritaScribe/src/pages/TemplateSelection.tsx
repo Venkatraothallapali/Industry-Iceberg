@@ -64,7 +64,7 @@ const TemplateSelection: React.FC = () => {
           >
             <img
               src={favicon}
-              alt="VeritaScribe"
+              alt="Industry Iceberg VeritaScribe - AI-powered medical template selection and document automation platform"
               className="template-nav-logo"
             />
             <span className="template-nav-title">VeritaScribe</span>

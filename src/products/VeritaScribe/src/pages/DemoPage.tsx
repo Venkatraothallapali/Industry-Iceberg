@@ -85,7 +85,7 @@ const DemoPage: React.FC = () => {
           >
             <img
               src={logoImage}
-              alt="VeritaScribe"
+              alt="Industry Iceberg VeritaScribe - AI-powered medical documentation and transcription platform demo"
               className="demo-nav-logo"
             />
             <span className="demo-nav-title">VeritaScribe</span>

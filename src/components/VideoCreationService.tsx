@@ -17,7 +17,11 @@ const VideoCreationService: FC = () => {
   })
   
   return (
-    <div className="video-service-page">
+    <div 
+      className="video-service-page"
+      role="img"
+      aria-label="Industry Iceberg Video Creation Service - professional video production, multimedia content creation, and AI-powered video automation for life sciences"
+    >
       {/* Header */}
       <header className="video-service-header">
         <div className="video-service-header-content">
@@ -255,7 +259,7 @@ const VideoCreationService: FC = () => {
               <div className="video-service-cta-actions">
                 <button 
                   className="video-service-cta-button secondary"
-                  onClick={() => navigate('/schedule-demo')}
+                  onClick={() => navigate('/videoservice-schedule-demo')}
                 >
                   Request a Demo
                 </button>

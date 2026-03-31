@@ -155,7 +155,14 @@ const Navbar: FC = () => {
             }
           }}
         >
-          <img src="/assets/image.png" alt="IndustryIceberg Logo" />
+          <img 
+            src="/assets/image.png"
+            alt="Industry Iceberg - AI-driven enterprise solutions for regulatory compliance and life sciences"
+            width={200}
+            height={60}
+            className="navbar-logo-img"
+            style={{ objectFit: 'contain' }}
+          />
         </a>
 
         <button 

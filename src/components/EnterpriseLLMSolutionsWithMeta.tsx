@@ -1,8 +1,12 @@
 import type { FC } from 'react'
 import { usePageMetaManager } from '../hooks/usePageMetaManager'
+import { useCanonicalUrlWithPath } from '../hooks/useCanonicalUrl'
 import EnterpriseLLMSolutions from './EnterpriseLLMSolutions'
 
 const EnterpriseLLMSolutionsWithMeta: FC = () => {
+  // Set canonical URL for enterprise LLM solutions page
+  useCanonicalUrlWithPath('/enterprise-llm-solutions')
+  
   usePageMetaManager({
     title: "Enterprise LLM Solutions | Industry Iceberg",
     description: "Enterprise Large Language Model solutions for healthcare and life sciences. Our LLM implementations provide intelligent document processing, regulatory compliance automation, and advanced data analysis for pharmaceutical and biotechnology companies.",

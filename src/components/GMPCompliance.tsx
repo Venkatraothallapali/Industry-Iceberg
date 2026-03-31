@@ -7,10 +7,14 @@ const GMPCompliance: FC = () => {
   return (
     <div className="gmp-compliance-page">
       {/* Hero Section */}
-      <section className="gmp-hero">
+      <section 
+        className="gmp-hero"
+        role="img"
+        aria-label="Industry Iceberg GMP compliance platform - pharmaceutical manufacturing quality assurance and regulatory consulting services"
+      >
         <div className="hero-card">
           <div className="hero-logo" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
-            <img src="/assets/image.png" alt="Industry Iceberg Logo" />
+            <img src="/assets/image.png" alt="Industry Iceberg - GMP compliance and regulatory consulting for pharmaceutical manufacturing" />
           </div>
         </div>
         <h1 className="hero-title">GMP Compliance</h1>

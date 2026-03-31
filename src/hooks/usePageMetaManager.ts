@@ -6,9 +6,10 @@ const GA_TRACKING_ID = 'G-SMN2K1HHVV'
 const defaultMeta = {
   title: "IndustryIceberg - AI-Driven Enterprise Solutions",
   description: "Industry Iceberg provides AI-driven enterprise solutions for regulatory compliance, quality management, and life sciences innovation.",
+  keywords: "AI solutions, enterprise solutions, regulatory compliance, quality management, life sciences, pharmaceutical technology",
   ogTitle: "IndustryIceberg - AI-Driven Enterprise Solutions",
   ogDescription: "Industry Iceberg provides AI-driven enterprise solutions for regulatory compliance, quality management, and life sciences innovation.",
-  ogUrl: "https://industryiceberg.com",
+  ogUrl: "https://www.industryiceberg.com",
   twitterTitle: "IndustryIceberg - AI-Driven Enterprise Solutions",
   twitterDescription: "Industry Iceberg provides AI-driven enterprise solutions for regulatory compliance, quality management, and life sciences innovation."
 }
@@ -16,6 +17,7 @@ const defaultMeta = {
 export const usePageMetaManager = (customMeta?: {
   title?: string
   description?: string
+  keywords?: string
   ogTitle?: string
   ogDescription?: string
   ogUrl?: string
@@ -41,6 +43,17 @@ export const usePageMetaManager = (customMeta?: {
     const metaDescription = document.querySelector("meta[name='description']")
     if (metaDescription && meta.description) {
       metaDescription.setAttribute("content", meta.description)
+    }
+
+    // Update meta keywords
+    let metaKeywords = document.querySelector("meta[name='keywords']")
+    if (!metaKeywords) {
+      metaKeywords = document.createElement('meta')
+      metaKeywords.setAttribute('name', 'keywords')
+      document.head.appendChild(metaKeywords)
+    }
+    if (metaKeywords && meta.keywords) {
+      metaKeywords.setAttribute("content", meta.keywords)
     }
 
     // Update Open Graph tags

@@ -35,7 +35,7 @@ const Navbar: React.FC = () => {
     setIsMobileMenuOpen(false)
     
     // Navigate to the specific service URL
-    navigate(`/compliance-loop/services/${serviceId}`)
+    navigate(`/complianceloop/services/${serviceId}`)
   }
 
   return (
@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
 
           {/* Logo */}
           <a href="/" className="nav-logo">
-            <img src={logoImage} alt="Industry Iceberg" />
+            <img src={logoImage} alt="Industry Iceberg Compliance Loop - AI-driven regulatory compliance platform for life sciences" />
           </a>
 
           {/* Mobile Toggle */}
@@ -75,7 +75,7 @@ const Navbar: React.FC = () => {
             {/* Services */}
             <li className="services-dropdown">
               <Link
-                to="/compliance-loop/services"
+                to="/complianceloop/services"
                 className={`nav-link ${
                   location.pathname.includes("services") ? "active" : ""
                 }`}
@@ -101,7 +101,7 @@ const Navbar: React.FC = () => {
             {/* Contact */}
             <li>
               <Link
-                to="/compliance-loop/demo"
+                to="/complianceloop/demo"
                 className={`nav-link ${
                   location.pathname.includes("demo") || location.pathname.includes("contact") ? "active" : ""
                 }`}

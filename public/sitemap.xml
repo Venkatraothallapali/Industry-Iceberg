@@ -6,152 +6,387 @@
   
   <!-- Homepage -->
   <url>
-    <loc>https://industryiceberg.com/</loc>
-    <lastmod>2026-03-27</lastmod>
+    <loc>https://www.industryiceberg.com/</loc>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Main Products -->
   <url>
-    <loc>https://industryiceberg.com/compliance-loop/</loc>
-    <lastmod>2026-03-27</lastmod>
+    <loc>https://www.industryiceberg.com/complianceloop/</loc>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://industryiceberg.com/complisense/</loc>
-    <lastmod>2026-03-27</lastmod>
+    <loc>https://www.industryiceberg.com/complisense/</loc>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://industryiceberg.com/veritascribe/</loc>
-    <lastmod>2026-03-27</lastmod>
+    <loc>https://www.industryiceberg.com/veritascribe/</loc>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+
+  <!-- VeritaScribe Subpages -->
+  <url>
+    <loc>https://www.industryiceberg.com/veritascribe/templates</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/veritascribe/data-source</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/veritascribe/review</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/veritascribe/demo</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/veritascribe/drafting</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/veritascribe/preview</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/ectd-ai</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/live-lms</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- CompliSense Subpages -->
+  <url>
+    <loc>https://www.industryiceberg.com/complisense/dashboard</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/complisense/observation-analysis</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/complisense/request-demo</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+
+  <!-- Services -->
+  
+  <url>
+    <loc>https://www.industryiceberg.com/complaint-site-search</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.industryiceberg.com/video-creation-service</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/ai-technologies-services</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/enterprise-llm-solutions</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <!-- Compliance Loop Services -->
   <url>
-    <loc>https://industryiceberg.com/compliance-loop/services/</loc>
-    <lastmod>2026-03-27</lastmod>
+    <loc>https://www.industryiceberg.com/complianceloop/services</loc>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
+  <!-- Complianceloop Contact Page -->
   <url>
-    <loc>https://industryiceberg.com/compliance-loop/services/cmo</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://industryiceberg.com/compliance-loop/services/cdmo</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://industryiceberg.com/compliance-loop/services/cro</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://industryiceberg.com/compliance-loop/services/preclinical</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://industryiceberg.com/compliance-loop/services/clinical</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://industryiceberg.com/compliance-loop/services/analytical-testing</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://industryiceberg.com/compliance-loop/services/stability-warehouse</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Contact/Demo Pages -->
-  <url>
-    <loc>https://industryiceberg.com/compliance-loop/demo</loc>
-    <lastmod>2026-03-27</lastmod>
+    <loc>https://www.industryiceberg.com/complianceloop/contact</loc>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://industryiceberg.com/compliance-loop/contact</loc>
-    <lastmod>2026-03-27</lastmod>
+    <loc>https://www.industryiceberg.com/complianceloop/services/CMO</loc>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
-  <!-- Other Pages -->
   <url>
-    <loc>https://industryiceberg.com/gmp-compliance</loc>
-    <lastmod>2026-03-27</lastmod>
+    <loc>https://www.industryiceberg.com/complianceloop/services/CDMO</loc>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://industryiceberg.com/complaint-site-search</loc>
-    <lastmod>2026-03-27</lastmod>
+    <loc>https://www.industryiceberg.com/complianceloop/services/CROs</loc>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://industryiceberg.com/quality-training</loc>
-    <lastmod>2026-03-27</lastmod>
+    <loc>https://www.industryiceberg.com/complianceloop/services/pre-clinical</loc>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://industryiceberg.com/blog</loc>
-    <lastmod>2026-03-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://www.industryiceberg.com/complianceloop/services/clinical</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://industryiceberg.com/contact</loc>
-    <lastmod>2026-03-27</lastmod>
+    <loc>https://www.industryiceberg.com/complianceloop/services/analytical-testing</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/complianceloop/services/stability-warehouse</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+
+  <!-- Demo Pages -->
+  <!-- Video Creation Service Demo page -->
+  <url>
+    <loc>https://www.industryiceberg.com/videoservice-schedule-demo</loc>
+    <lastmod>2026-03-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://industryiceberg.com/privacy-policy</loc>
-    <lastmod>2026-03-27</lastmod>
+    <loc>https://www.industryiceberg.com/ai-model-demo</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/enterprise-llm-demo</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/ectd-ai-demo</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/live-lms-demo</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+
+  <!-- Blog Pages -->
+  <url>
+    <loc>https://www.industryiceberg.com/blog</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Individual Blog Posts -->
+  <url>
+    <loc>https://www.industryiceberg.com/blog/fda-bayesian-methodology-clinical-trials-drugs-biologics</loc>
+    <lastmod>2026-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/blog/ema-fda-principles-artificial-intelligence-medicines-development</loc>
+    <lastmod>2026-01-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/blog/japan-pmda-strategic-action-plan-ai-integration-pharmaceutical-medical-device</loc>
+    <lastmod>2026-01-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/blog/saudi-arabia-sfda-digital-health-medication-safety</loc>
+    <lastmod>2026-02-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/blog/ema-reflection-framework-artificial-intelligence-medicinal-product-lifecycle</loc>
+    <lastmod>2026-02-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/blog/fda-integrated-framework-artificial-intelligence-medical-devices-samd</loc>
+    <lastmod>2026-02-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/blog/india-cdso-draft-guidance-medical-device-software-samd-simd</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/blog/fda-ai-support-regulatory-decision-making-drug-biological-products</loc>
+    <lastmod>2026-02-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/blog/fda-cber-artificial-intelligence-machine-learning-biological-products</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/blog/china-national-reform-drug-medical-device-regulation-pharmaceutical-development</loc>
+    <lastmod>2026-03-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/blog/south-korea-mfds-draft-amendments-digital-medical-devices-act</loc>
+    <lastmod>2026-03-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/blog/ai-driven-document-automation-regulatory-submissions</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/blog/future-gmp-compliance-ai-powered-quality-management</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/blog/digital-transformation-life-sciences-roadmap-success</loc>
+    <lastmod>2026-03-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/blog/fda-ai-driven-biocomplexity-drug-development</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.industryiceberg.com/blog/china-ich-e6r3-global-clinical-trial-standards</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Contact Pages -->
+  <url>
+    <loc>https://www.industryiceberg.com/contact-us</loc>
+    <lastmod>2026-03-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://www.industryiceberg.com/privacy-policy</loc>
+    <lastmod>2026-01-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://industryiceberg.com/terms-of-use</loc>
-    <lastmod>2026-03-27</lastmod>
+    <loc>https://www.industryiceberg.com/terms-of-use</loc>
+    <lastmod>2026-01-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

@@ -23,6 +23,9 @@ function App() {
         <Route path="request-demo" element={<RequestDemo />} />
         <Route path="login" element={<Login />} />
         <Route path="observation-analysis" element={<ObservationAnalysis />} />
+        
+        {/* Redirect unknown routes to dashboard */}
+        <Route path="*" element={<Navigate to="dashboard" replace />} />
       </Routes>
     </div>
   );

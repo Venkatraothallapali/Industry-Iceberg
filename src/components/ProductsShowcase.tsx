@@ -56,7 +56,7 @@ const ProductsShowcase: FC = () => {
               className="product-link"
               onClick={(e) => {
                 e.preventDefault()
-                navigate('/compliance-loop')
+                navigate('/complianceloop')
               }}
             >
               Learn More →

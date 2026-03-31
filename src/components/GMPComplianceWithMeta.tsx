@@ -1,8 +1,12 @@
 import type { FC } from 'react'
 import { usePageMetaManager } from '../hooks/usePageMetaManager'
+import { useCanonicalUrlWithPath } from '../hooks/useCanonicalUrl'
 import GMPCompliance from './GMPCompliance'
 
 const GMPComplianceWithMeta: FC = () => {
+  // Set canonical URL for GMP Compliance page
+  useCanonicalUrlWithPath('/gmp-compliance')
+  
   usePageMetaManager({
     title: "GMP Compliance | Industry Iceberg",
     description: "Good Manufacturing Practice compliance solutions for pharmaceutical and biotechnology companies. Our GMP consulting services ensure regulatory compliance, quality system implementation, and operational excellence for FDA, EMA, and global regulatory requirements.",

@@ -1,8 +1,49 @@
-# Hostinger SPA Routing Configuration
-# Ensures React Router works correctly on refresh
+# Industry Iceberg - SEO Optimization & SPA Routing Configuration
+# Ensures React Router works correctly on refresh + handles canonical redirects
 
 # Enable rewrite engine
 RewriteEngine On
+
+# Force HTTPS redirection
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Force WWW redirection
+RewriteCond %{HTTP_HOST} ^industryiceberg\.com [NC]
+RewriteRule ^(.*)$ https://www.industryiceberg.com/$1 [L,R=301]
+
+# Remove trailing slashes (except for directories)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [L,R=301]
+
+# Service redirects (short URLs to full paths with uppercase)
+RewriteRule ^cmo/?$ /complianceloop/services/CMO [L,R=301]
+RewriteRule ^cdmo/?$ /complianceloop/services/CDMO [L,R=301]
+RewriteRule ^cro/?$ /complianceloop/services/CROs [L,R=301]
+RewriteRule ^preclinical/?$ /complianceloop/services/pre-clinical [L,R=301]
+RewriteRule ^analytical-testing/?$ /complianceloop/services/analytical-testing [L,R=301]
+RewriteRule ^stability/?$ /complianceloop/services/stability-warehouse [L,R=301]
+
+# Demo redirects
+RewriteRule ^demo/?$ /contact [L,R=301]
+RewriteRule ^schedule-demo/?$ /videoservice-schedule-demo [L,R=301]
+RewriteRule ^request-demo/?$ /contact [L,R=301]
+
+# Legacy page redirects (from old hyphenated URLs to new format)
+RewriteRule ^about-us/?$ /about [L,R=301]
+RewriteRule ^contact-us/?$ /contact [L,R=301]
+RewriteRule ^our-services/?$ /complianceloop/services [L,R=301]
+RewriteRule ^compliance-loop/?$ /complianceloop [L,R=301]
+RewriteRule ^compliance-loop/services/?$ /complianceloop/services [L,R=301]
+RewriteRule ^compliance-loop/demo/?$ /complianceloop/demo [L,R=301]
+RewriteRule ^compliance-loop/services/cmo/?$ /complianceloop/services/CMO [L,R=301]
+RewriteRule ^compliance-loop/services/cdmo/?$ /complianceloop/services/CDMO [L,R=301]
+RewriteRule ^compliance-loop/services/cro/?$ /complianceloop/services/CROs [L,R=301]
+RewriteRule ^compliance-loop/services/preclinical/?$ /complianceloop/services/pre-clinical [L,R=301]
+
+# Custom error pages
+ErrorDocument 404 /index.html
 
 # Handle React Router - redirect all requests to index.html
 # Except for actual files and directories that exist
@@ -16,6 +57,9 @@ RewriteRule ^(.*)$ index.html [QSA,L]
     Header always set X-Frame-Options DENY
     Header always set X-XSS-Protection "1; mode=block"
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+    # SEO headers
+    Header always set X-Canonical "https://www.industryiceberg.com"
 </IfModule>
 
 # Gzip compression

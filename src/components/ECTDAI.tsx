@@ -19,9 +19,13 @@ const ECTDAI: FC = () => {
   return (
     <div className="ectdai-page">
       {/* Hero Section */}
-      <div className="ectdai-hero">
+      <div 
+        className="ectdai-hero"
+        role="img"
+        aria-label="Industry Iceberg ECTD AI platform - electronic common technical document automation for regulatory submissions and FDA compliance"
+      >
         <div className="ectdai-hero-logo" onClick={() => navigate('/')}>
-          <img src="/assets/image.png" alt="Industry Iceberg Logo" />
+          <img src="/assets/image.png" alt="Industry Iceberg - ECTD AI electronic common technical document automation for regulatory submissions" />
         </div>
         <h1 className="ectdai-hero-title">ECTD AI</h1>
       </div>

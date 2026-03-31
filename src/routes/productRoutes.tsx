@@ -8,7 +8,7 @@ const productRoutes = [
     element: <VeritaScribeApp />
   },
   {
-    path: "/compliance-loop/*",
+    path: "/complianceloop/*",
     element: <ComplianceApp />
   },
   {

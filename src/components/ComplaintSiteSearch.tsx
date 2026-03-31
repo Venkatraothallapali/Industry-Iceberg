@@ -17,7 +17,7 @@ const ComplaintSiteSearch: FC = () => {
   })
 
   const handleSeeProduct = () => {
-    navigate('/compliance-loop');
+    navigate('/complianceloop');
   };
 
   return (
@@ -26,7 +26,7 @@ const ComplaintSiteSearch: FC = () => {
       <section className="gmp-hero">
         <div className="hero-card">
           <div className="hero-logo" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
-            <img src="/assets/image.png" alt="Industry Iceberg Logo" />
+            <img src="/assets/image.png" alt="Industry Iceberg - Complaint Site Search regulatory compliance platform for pharmaceutical companies" />
           </div>
         </div>
         <h1 className="hero-title">Complaint Site Selection</h1>

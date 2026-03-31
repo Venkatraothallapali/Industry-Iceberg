@@ -29,11 +29,11 @@ export const usePageMeta = () => {
     
     if (serviceId && serviceTitleMapping[serviceId]) {
       pageTitle = serviceTitleMapping[serviceId]
-    } else if (currentPath === '/compliance-loop/services') {
+    } else if (currentPath === '/complianceloop/services') {
       pageTitle = 'Services | Industry Iceberg'
-    } else if (currentPath === '/compliance-loop/') {
+    } else if (currentPath === '/complianceloop/') {
       pageTitle = 'Compliance Loop | Industry Iceberg'
-    } else if (currentPath === '/compliance-loop/contact' || currentPath === '/compliance-loop/demo') {
+    } else if (currentPath === '/complianceloop/contact' || currentPath === '/complianceloop/demo') {
       pageTitle = 'Schedule a Demo | Industry Iceberg'
     }
 

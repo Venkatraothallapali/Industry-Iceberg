@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useCanonicalUrlWithPath } from '../../../../hooks/useCanonicalUrl'
 import './Home.css'
 
 import logoImage from '../assets/image.png'
@@ -13,13 +14,13 @@ import StabilityIcon from '../assets/ServisesIcons_images/Stability & Warehouse.
 import Navbar from './Navbar'
 
 
-
-
 const Home: React.FC = () => {
 
   const homeRef = useRef<HTMLElement>(null)
   const navigate = useNavigate()
 
+  // Set canonical URL for Compliance Loop home page
+  useCanonicalUrlWithPath('/complianceloop')
 
 
   useEffect(() => {
@@ -88,7 +89,13 @@ const Home: React.FC = () => {
 
       <Navbar />
 
-      <section id="home" className="home-section" ref={homeRef}>
+      <section 
+        id="home" 
+        className="home-section" 
+        ref={homeRef}
+        role="img"
+        aria-label="Industry Iceberg Compliance Loop - AI-driven regulatory compliance platform for life sciences companies connecting with CMO, CDMO, CRO partners"
+      >
 
         <div className="home-hero">
 
@@ -156,7 +163,7 @@ const Home: React.FC = () => {
                 <div className="service-icon">
                   <img
                     src={CMOIcon}
-                    alt="CMO service icon"
+                    alt="Contract Manufacturing Organizations CMO services - regulatory compliance pharmaceutical manufacturing"
                   />
                 </div>
                 <h4>Contract Manufacturing Organizations (CMO)</h4>
@@ -165,7 +172,7 @@ const Home: React.FC = () => {
                 <div className="service-icon">
                   <img
                     src={CROIcon}
-                    alt="CRO service icon"
+                    alt="Contract Research Organizations CRO services - clinical trials pharmaceutical research"
                   />
                 </div>
                 <h4>Contract Research Organizations (CROs)</h4>
@@ -174,7 +181,7 @@ const Home: React.FC = () => {
                 <div className="service-icon">
                   <img
                     src={PreClinicalIcon}
-                    alt="Pre-Clinical service icon"
+                    alt="Pre-Clinical research services - drug development safety assessment toxicology studies"
                   />
                 </div>
                 <h4>Pre-Clinical</h4>
@@ -183,7 +190,7 @@ const Home: React.FC = () => {
                 <div className="service-icon">
                   <img
                     src={ClinicalIcon}
-                    alt="Clinical service icon"
+                    alt="Clinical trial services - clinical research Phase I II III IV studies"
                   />
                 </div>
                 <h4>Clinical</h4>
@@ -192,7 +199,7 @@ const Home: React.FC = () => {
                 <div className="service-icon">
                   <img
                     src={ATLIcon}
-                    alt="Analytical Testing Lab (ATL) service icon"
+                    alt="Analytical Testing Lab ATL services - quality control method validation pharmaceutical testing"
                   />
                 </div>
                 <h4>Analytical Testing Lab (ATL)</h4>
@@ -201,7 +208,7 @@ const Home: React.FC = () => {
                 <div className="service-icon">
                   <img
                     src={StabilityIcon}
-                    alt="Stability & Warehouse service icon"
+                    alt="Stability and Warehouse services - cold chain storage pharmaceutical logistics ICH compliance"
                   />
                 </div>
                 <h4>Stability & Warehouse</h4>
@@ -220,7 +227,7 @@ const Home: React.FC = () => {
 
             <div className="footer-logo-section">
 
-              <img src={logoImage} alt="Industry Iceberg" className="compliance-loop-footer-logo" />
+              <img src={logoImage} alt="Industry Iceberg Compliance Loop - AI-driven regulatory compliance platform" className="compliance-loop-footer-logo" />
 
               <div className="footer-brand">
 
@@ -232,21 +239,21 @@ const Home: React.FC = () => {
 
             <nav className="compliance-loop-footer-nav">
 
-              <a href="/compliance-loop/services" className="compliance-loop-footer-link" onClick={(e) => {
+              <a href="/complianceloop/services" className="compliance-loop-footer-link" onClick={(e) => {
 
                 e.preventDefault();
 
-                navigate('/compliance-loop/services');
+                navigate('/complianceloop/services');
 
                 window.scrollTo({ top: 0, behavior: 'smooth' });
 
               }}>Services</a>
 
-              <a href="/compliance-loop/demo" className="compliance-loop-footer-link" onClick={(e) => {
+              <a href="/complianceloop/demo" className="compliance-loop-footer-link" onClick={(e) => {
 
                 e.preventDefault();
 
-                navigate('/compliance-loop/demo');
+                navigate('/complianceloop/demo');
 
                 window.scrollTo({ top: 0, behavior: 'smooth' });
 

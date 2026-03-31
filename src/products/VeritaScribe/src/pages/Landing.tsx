@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import { useNavigate, Link } from "react-router-dom";
-import "../styles/landing.css";
+import { useState } from 'react'
+import { useNavigate, Link } from 'react-router-dom'
+import { useCanonicalUrlWithPath } from '../../../../hooks/useCanonicalUrl'
+import './Landing.minimal.css'
 import imagePng from "../assets/image.png";
 import searchImg from "../assets/Search.png";
 import editReviewImg from "../assets/Edit_review.png";
@@ -20,6 +21,9 @@ interface Feature {
 const Landing: React.FC = () => {
   const navigate = useNavigate();
   const [isVisible] = useState(true);
+  
+  // Set canonical URL for VeritaScribe landing page
+  useCanonicalUrlWithPath('/veritascribe')
 
   const features: Feature[] = [
     {
@@ -62,7 +66,7 @@ const Landing: React.FC = () => {
         <div className="nav-container">
           <div className="nav-logo">
             <Link to="/">
-              <img src={imagePng} alt="Home Logo" />
+              <img src={imagePng} alt="Industry Iceberg - AI-powered medical documentation and transcription platform" />
             </Link>
           </div>
           <div className="nav-links">
@@ -85,7 +89,7 @@ const Landing: React.FC = () => {
         <div className="hero-background">
           <img
             src={VSCImage}
-            alt="Background"
+            alt="VeritaScribe AI-powered medical documentation platform - automated document workflow for healthcare and life sciences"
             className="hero-background-image"
             loading="eager"
             decoding="async"
@@ -243,7 +247,7 @@ const Landing: React.FC = () => {
       <footer className="landing-footer">
         <div className="landing-footer-content">
           <div className="footer-logo-section">
-            <img src={imagePng} alt="Industry Iceberg" className="landing-footer-logo" />
+            <img src={imagePng} alt="Industry Iceberg VeritaScribe - AI-powered medical documentation transcription services" className="landing-footer-logo" />
             <div className="footer-brand">
               <span className="footer-brand-name">VeritaScribe</span>
             </div>

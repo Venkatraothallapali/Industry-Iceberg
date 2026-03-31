@@ -21,7 +21,7 @@ const Footer: FC = () => {
             >
               <img
                 src="/assets/image.png"
-                alt="IndustryIceberg Logo"
+                alt="Industry Iceberg - AI-driven enterprise solutions for regulatory compliance and life sciences innovation"
                 className="footer-logo"
               />
             </a>

@@ -113,7 +113,7 @@ const RequestDemo = () => {
       <nav className="demo-nav">
         <div className="demo-nav-container">
           <div className="demo-nav-brand">
-            <img src={logoImage} alt="CompliSense Logo" className="demo-nav-logo" />
+            <img src={logoImage} alt="Industry Iceberg CompliSense - AI-powered compliance management and regulatory automation platform" className="demo-nav-logo" />
             <span className="demo-nav-title">CompliSense</span>
           </div>
         </div>

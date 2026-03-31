@@ -40,7 +40,7 @@ const Navbar = () => {
             <div className="complisense-logo-container">
               <img
                 src={logo}
-                alt="FDA Logo"
+                alt="Industry Iceberg CompliSense - AI-powered FDA compliance management and regulatory automation platform"
                 style={{ width: '158px', height: '59px' }}
                 className="complisense-logo-image"
               />
