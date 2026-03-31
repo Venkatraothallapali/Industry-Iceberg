@@ -3,7 +3,7 @@ import "./styles/index.css"
 
 import Home from "./components/Home"
 import Services from "./components/Services"
-import DemoPage from "./components/DemoPage"
+import ComplianceLoopDemoWithSchema from "./components/ComplianceLoopDemoWithSchema"
 import { useProductPageMeta } from "../../../hooks/useProductPageMeta"
 
 export default function ComplianceApp() {
@@ -23,8 +23,8 @@ export default function ComplianceApp() {
         <Route path="services/:serviceId" element={<Services />} />
 
         {/* Contact / Demo Page */}
-        <Route path="contact" element={<DemoPage />} />
-        <Route path="demo" element={<DemoPage />} />
+        <Route path="contact" element={<ComplianceLoopDemoWithSchema />} />
+        <Route path="demo" element={<ComplianceLoopDemoWithSchema />} />
 
         {/* Redirect Unknown Routes */}
         <Route path="*" element={<Navigate to="/" replace />} />

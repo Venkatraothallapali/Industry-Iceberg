@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import logoImage from '../assets/logo-cdoxsd3z.png'
 import './ScheduleDemo.css'
 
 const ScheduleDemo: React.FC = () => {
@@ -82,7 +83,7 @@ const ScheduleDemo: React.FC = () => {
       <nav className="demo-nav">
         <div className="demo-nav-container">
           <div className="demo-nav-brand" onClick={() => navigate('/')} style={{ cursor: 'pointer' }}>
-            <img src="/assets/logo-cdoxsd3z.png" alt="Industry Iceberg - Enterprise AI solutions and technology consulting services" className="demo-nav-logo" />
+            <img src={logoImage} alt="Industry Iceberg - Enterprise AI solutions and technology consulting services" className="demo-nav-logo" />
             <span className="demo-nav-title">Video Creation Service</span>
           </div>
         </div>

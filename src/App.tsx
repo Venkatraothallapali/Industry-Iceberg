@@ -7,13 +7,13 @@ import Navbar from './components/Navbar'
 import HomeWithMeta from './components/HomeWithMeta'
 import Footer from './components/Footer'
 import NotFound from './components/NotFound'
-import GMPComplianceWithMeta from './components/GMPComplianceWithMeta'
+import GMPComplianceWithSchema from './components/GMPComplianceWithSchema'
 import ComplaintSiteSearchWithSchema from './components/ComplaintSiteSearchWithSchema'
-import QualityTrainingWithMeta from './components/QualityTrainingWithMeta'
+import QualityTrainingWithSchema from './components/QualityTrainingWithSchema'
 import BlogWithSchema from './components/BlogWithSchema'
 import BlogArticleWithSchema from './components/BlogArticleWithSchema'
 import RedirectToSlug from './components/RedirectToSlug'
-import ContactUsWithMeta from './components/ContactUsWithMeta'
+import ContactUsWithSchema from './components/ContactUsWithSchema'
 import VideoCreationServiceWithSchema from './components/VideoCreationServiceWithSchema'
 import LiveLMSWithSchema from './components/LiveLMSWithSchema'
 import AiModelDevelopmentWithSchema from './components/AiModelDevelopmentWithSchema'
@@ -79,7 +79,7 @@ function App() {
         <Route path="/gmp-compliance" element={
           <div className="main-app">
             <Navbar />
-            <GMPComplianceWithMeta />
+            <GMPComplianceWithSchema />
           </div>
         } />
 
@@ -93,7 +93,7 @@ function App() {
         <Route path="/quality-training" element={
           <div className="main-app">
             <Navbar />
-            <QualityTrainingWithMeta />
+            <QualityTrainingWithSchema />
           </div>
         } />
 
@@ -124,7 +124,7 @@ function App() {
         <Route path="/contact-us" element={
           <div className="main-app">
             <Navbar />
-            <ContactUsWithMeta />
+            <ContactUsWithSchema />
             <Footer />
           </div>
         } />

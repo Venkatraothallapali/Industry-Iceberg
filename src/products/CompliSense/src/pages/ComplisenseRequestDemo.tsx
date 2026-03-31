@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import logoImage from '../assets/logo.png';
+import logoImage from '../../../../assets/logo-cdoxsd3z.png';
 
 interface DemoFormData {
   name: string;

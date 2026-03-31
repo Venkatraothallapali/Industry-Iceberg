@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaRocket, FaCheckCircle, FaUsers, FaClock } from 'react-icons/fa';
-import logoImage from '../assets/logo-cdoxsd3z.png';
+import logoImage from '../../../../assets/logo-cdoxsd3z.png';
 import './DemoPage.css';
 
 const DemoPage: React.FC = () => {

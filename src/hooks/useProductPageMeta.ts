@@ -41,6 +41,69 @@ const productMetaConfigs: Record<string, ProductMetaConfig> = {
     ogDescription: 'VeritaScribe AI automates document drafting, ensures compliance, and accelerates workflow with summaries, edits, and smart collaboration tools.',
     twitterTitle: 'VeritaScribe: AI Document Automation | IndustryIceberg',
     twitterDescription: 'VeritaScribe AI automates document drafting, ensures compliance, and accelerates workflow with summaries, edits, and smart collaboration tools.'
+  },
+  'veritascribe-templates': {
+    title: 'Document Templates | VeritaScribe AI | Industry Iceberg',
+    description: 'Access pre-built regulatory document templates with VeritaScribe AI. Streamline your pharma document creation with compliant, industry-standard templates.',
+    keywords: 'document templates, regulatory templates, pharma document templates, compliance templates, VeritaScribe templates, SOP templates, regulatory document standards',
+    ogTitle: 'Document Templates | VeritaScribe AI | Industry Iceberg',
+    ogDescription: 'Access pre-built regulatory document templates with VeritaScribe AI. Streamline your pharma document creation with compliant, industry-standard templates.',
+    twitterTitle: 'Document Templates | VeritaScribe AI | Industry Iceberg',
+    twitterDescription: 'Access pre-built regulatory document templates with VeritaScribe AI. Streamline your pharma document creation with compliant, industry-standard templates.'
+  },
+  'veritascribe-drafting': {
+    title: 'AI Document Drafting | VeritaScribe | Industry Iceberg',
+    description: 'Use AI-powered document drafting to create compliant regulatory documents faster. VeritaScribe helps you draft SOPs, protocols, and reports with ease.',
+    keywords: 'AI document drafting, regulatory document drafting, SOP drafting, protocol drafting, AI writing assistant, pharma document creation, compliance drafting',
+    ogTitle: 'AI Document Drafting | VeritaScribe | Industry Iceberg',
+    ogDescription: 'Use AI-powered document drafting to create compliant regulatory documents faster. VeritaScribe helps you draft SOPs, protocols, and reports with ease.',
+    twitterTitle: 'AI Document Drafting | VeritaScribe | Industry Iceberg',
+    twitterDescription: 'Use AI-powered document drafting to create compliant regulatory documents faster. VeritaScribe helps you draft SOPs, protocols, and reports with ease.'
+  },
+  'veritascribe-review': {
+    title: 'Document Review & Collaboration | VeritaScribe | Industry Iceberg',
+    description: 'Collaborate on regulatory documents with AI-assisted review. Track changes, add comments, and ensure compliance with VeritaScribe\'s review features.',
+    keywords: 'document review, regulatory review, collaborative editing, track changes, document collaboration, compliance review, pharma document approval',
+    ogTitle: 'Document Review & Collaboration | VeritaScribe | Industry Iceberg',
+    ogDescription: 'Collaborate on regulatory documents with AI-assisted review. Track changes, add comments, and ensure compliance with VeritaScribe\'s review features.',
+    twitterTitle: 'Document Review & Collaboration | VeritaScribe | Industry Iceberg',
+    twitterDescription: 'Collaborate on regulatory documents with AI-assisted review. Track changes, add comments, and ensure compliance with VeritaScribe\'s review features.'
+  },
+  'veritascribe-preview': {
+    title: 'Document Preview | VeritaScribe AI | Industry Iceberg',
+    description: 'Preview your regulatory documents before finalization. Ensure formatting, compliance, and accuracy with VeritaScribe\'s document preview feature.',
+    keywords: 'document preview, regulatory document preview, document formatting, compliance check, document validation, final document review',
+    ogTitle: 'Document Preview | VeritaScribe AI | Industry Iceberg',
+    ogDescription: 'Preview your regulatory documents before finalization. Ensure formatting, compliance, and accuracy with VeritaScribe\'s document preview feature.',
+    twitterTitle: 'Document Preview | VeritaScribe AI | Industry Iceberg',
+    twitterDescription: 'Preview your regulatory documents before finalization. Ensure formatting, compliance, and accuracy with VeritaScribe\'s document preview feature.'
+  },
+  'veritascribe-data-source': {
+    title: 'Data Source Integration | VeritaScribe | Industry Iceberg',
+    description: 'Connect multiple data sources to your regulatory documents. Import data from databases, files, and systems directly into VeritaScribe.',
+    keywords: 'data source integration, document data import, regulatory data sources, database integration, document automation data, data-driven documents',
+    ogTitle: 'Data Source Integration | VeritaScribe | Industry Iceberg',
+    ogDescription: 'Connect multiple data sources to your regulatory documents. Import data from databases, files, and systems directly into VeritaScribe.',
+    twitterTitle: 'Data Source Integration | VeritaScribe | Industry Iceberg',
+    twitterDescription: 'Connect multiple data sources to your regulatory documents. Import data from databases, files, and systems directly into VeritaScribe.'
+  },
+  'complisense-dashboard': {
+    title: 'cGMP Intelligence Dashboard | CompliSense | Industry Iceberg',
+    description: 'View real-time FDA 483 insights, GMP trends, and compliance analytics on the CompliSense dashboard. Make data-driven compliance decisions.',
+    keywords: 'cGMP dashboard, compliance dashboard, FDA 483 analytics, GMP intelligence dashboard, regulatory analytics, compliance monitoring dashboard',
+    ogTitle: 'cGMP Intelligence Dashboard | CompliSense | Industry Iceberg',
+    ogDescription: 'View real-time FDA 483 insights, GMP trends, and compliance analytics on the CompliSense dashboard. Make data-driven compliance decisions.',
+    twitterTitle: 'cGMP Intelligence Dashboard | CompliSense | Industry Iceberg',
+    twitterDescription: 'View real-time FDA 483 insights, GMP trends, and compliance analytics on the CompliSense dashboard. Make data-driven compliance decisions.'
+  },
+  'complisense-observation': {
+    title: 'FDA Observation Analysis | CompliSense | Industry Iceberg',
+    description: 'Analyze FDA Form 483 observations with AI-powered insights. Identify trends, root causes, and corrective actions with CompliSense.',
+    keywords: 'FDA observation analysis, Form 483 analysis, inspection observation trends, regulatory observation insights, compliance issue analysis',
+    ogTitle: 'FDA Observation Analysis | CompliSense | Industry Iceberg',
+    ogDescription: 'Analyze FDA Form 483 observations with AI-powered insights. Identify trends, root causes, and corrective actions with CompliSense.',
+    twitterTitle: 'FDA Observation Analysis | CompliSense | Industry Iceberg',
+    twitterDescription: 'Analyze FDA Form 483 observations with AI-powered insights. Identify trends, root causes, and corrective actions with CompliSense.'
   }
 }
 
@@ -133,6 +196,46 @@ export const useProductPageMeta = () => {
             { name: "Compliance Loop", url: "/complianceloop" },
             { name: "Services", url: "/complianceloop/services" },
             { name: serviceName.charAt(0).toUpperCase() + serviceName.slice(1), url: pathname }
+          )
+        }
+      } else if (pathname.includes('/veritascribe/')) {
+        // Check for VeritaScribe sub-pages
+        const subPageMatch = pathname.match(/\/veritascribe\/([^/]+)/)
+        if (subPageMatch) {
+          const subPage = subPageMatch[1]
+          const configKey = `veritascribe-${subPage}`
+          metaConfig = productMetaConfigs[configKey] || productMetaConfigs['veritascribe'] || null
+          breadcrumbs.push(
+            { name: "VeritaScribe", url: "/veritascribe" },
+            { name: subPage.charAt(0).toUpperCase() + subPage.slice(1).replace('-', ' '), url: pathname }
+          )
+        } else {
+          // Main VeritaScribe page
+          metaConfig = productMetaConfigs['veritascribe'] || null
+          breadcrumbs.push(
+            { name: "VeritaScribe", url: "/veritascribe" }
+          )
+        }
+      } else if (pathname.includes('/complisense/')) {
+        // Check for CompliSense sub-pages
+        const subPageMatch = pathname.match(/\/complisense\/([^/]+)/)
+        if (subPageMatch) {
+          const subPage = subPageMatch[1]
+          let configKey = `complisense-${subPage}`
+          // Handle observation-analysis special case
+          if (subPage === 'observation-analysis') {
+            configKey = 'complisense-observation'
+          }
+          metaConfig = productMetaConfigs[configKey] || productMetaConfigs['complisense'] || null
+          breadcrumbs.push(
+            { name: "CompliSense", url: "/complisense" },
+            { name: subPage.charAt(0).toUpperCase() + subPage.slice(1).replace('-', ' '), url: pathname }
+          )
+        } else {
+          // Main CompliSense page (redirects to dashboard)
+          metaConfig = productMetaConfigs['complisense'] || null
+          breadcrumbs.push(
+            { name: "CompliSense", url: "/complisense" }
           )
         }
       } else {
