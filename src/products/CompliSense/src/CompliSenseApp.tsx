@@ -4,6 +4,7 @@ import Dashboard from './pages/DashboardWithSchema';
 import CompliSenseDemoWithSchema from './pages/CompliSenseDemoWithSchema';
 import Login from './pages/ComplisenseLogin';
 import ObservationAnalysis from './pages/ComplisenseObservationAnalysis';
+import NotFound from '../../../components/NotFound';
 import './ComplisenseApp.css';
 import { useProductPageMeta } from '../../../hooks/useProductPageMeta';
 
@@ -24,8 +25,8 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="observation-analysis" element={<ObservationAnalysis />} />
         
-        {/* Redirect unknown routes to dashboard */}
-        <Route path="*" element={<Navigate to="dashboard" replace />} />
+        {/* Unknown Routes - Show 404 */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

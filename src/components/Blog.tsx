@@ -9,6 +9,7 @@ const Blog: FC = () => {
   const navigate = useNavigate()
   const [email, setEmail] = useState('')
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
+  const [searchQuery, setSearchQuery] = useState('')
 
   // Set proper meta tags for blog listing page
   usePageMetaManager({
@@ -57,10 +58,17 @@ const Blog: FC = () => {
     return acc
   }, {} as Record<string, number>)
 
-  // Filter posts by selected category
-  const filteredPosts = selectedCategory
-    ? blogPosts.filter(post => post.category === selectedCategory)
-    : blogPosts
+  // Filter posts by selected category and search query
+  const filteredPosts = blogPosts.filter(post => {
+    const matchesCategory = selectedCategory ? post.category === selectedCategory : true
+    const matchesSearch = searchQuery
+      ? post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        post.excerpt.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        post.category.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        post.author.toLowerCase().includes(searchQuery.toLowerCase())
+      : true
+    return matchesCategory && matchesSearch
+  })
 
   // Get posts organized by category
   const postsByCategory = Object.keys(categories).map(category => ({
@@ -87,6 +95,37 @@ const Blog: FC = () => {
         <div className="blog-container blog-layout">
           {/* Main Content - Blog Posts */}
           <div className="blog-main">
+            {/* Search Bar */}
+            <div className="blog-search-container">
+              <div className="blog-search-box">
+                <svg className="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <input
+                  type="text"
+                  placeholder="Search blogs by title, topic, or keyword..."
+                  className="blog-search-input"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
+                {searchQuery && (
+                  <button
+                    className="search-clear-btn"
+                    onClick={() => setSearchQuery('')}
+                    title="Clear search"
+                  >
+                    ✕
+                  </button>
+                )}
+              </div>
+              {searchQuery && (
+                <span className="search-results-count">
+                  {filteredPosts.length} result{filteredPosts.length !== 1 ? 's' : ''} found
+                </span>
+              )}
+            </div>
+
             {selectedCategory && (
               <div className="category-filter-bar">
                 <span className="filter-label">Showing: {selectedCategory}</span>
@@ -100,7 +139,8 @@ const Blog: FC = () => {
             )}
             
             <div className="blog-posts-grid">
-              {(selectedCategory ? filteredPosts : blogPosts).map((post) => (
+              {filteredPosts.length > 0 ? (
+                filteredPosts.map((post) => (
                 <article key={post.id} className="blog-post-card">
                   <div className="blog-post-header">
                     <span className="blog-post-category">{post.category}</span>
@@ -125,7 +165,23 @@ const Blog: FC = () => {
                     </a>
                   </div>
                 </article>
-              ))}
+              ))
+              ) : (
+                <div className="no-results-message">
+                  <svg className="no-results-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                  </svg>
+                  <h3>No blogs found</h3>
+                  <p>Try adjusting your search or browse by category</p>
+                  <button
+                    className="clear-search-btn"
+                    onClick={() => {setSearchQuery(''); setSelectedCategory(null);}}
+                  >
+                    Clear All Filters
+                  </button>
+                </div>
+              )}
             </div>
           </div>
 

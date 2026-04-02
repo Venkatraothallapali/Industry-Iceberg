@@ -6,6 +6,7 @@ import { Compliance_Loop } from '../config'
 import { CompliSense } from '../config'
 import { Veritascribe } from '../config'
 import { trackButtonClick } from '../utils/analytics'
+import { searchSite, SearchItem } from '../utils/searchIndex'
 
 interface DropdownItem {
   label: string
@@ -19,6 +20,12 @@ const Navbar: FC = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const dropdownRef = useRef<HTMLDivElement>(null)
+  
+  // Search state
+  const [searchQuery, setSearchQuery] = useState('')
+  const [searchResults, setSearchResults] = useState<SearchItem[]>([])
+  const [showSearchResults, setShowSearchResults] = useState(false)
+  const searchRef = useRef<HTMLDivElement>(null)
 
   const productsMenu: DropdownItem[] = [
     { label: 'Complaint Site Selection', href: '/complaint-site-search' },
@@ -51,6 +58,11 @@ const Navbar: FC = () => {
           setActiveDropdown(null)
         }
       }
+      
+      // Close search results when clicking outside
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+        setShowSearchResults(false)
+      }
     }
 
     document.addEventListener('mousedown', handleClickOutside)
@@ -59,6 +71,32 @@ const Navbar: FC = () => {
       document.removeEventListener('mousedown', handleClickOutside)
     }
   }, [])
+
+  const handleSearch = (query: string) => {
+    setSearchQuery(query)
+    if (query.trim().length >= 2) {
+      const results = searchSite(query)
+      setSearchResults(results)
+      setShowSearchResults(true)
+    } else {
+      setSearchResults([])
+      setShowSearchResults(false)
+    }
+  }
+
+  const handleSearchSelect = (item: SearchItem) => {
+    setSearchQuery('')
+    setSearchResults([])
+    setShowSearchResults(false)
+    navigate(item.path)
+  }
+
+
+  const clearSearch = () => {
+    setSearchQuery('')
+    setSearchResults([])
+    setShowSearchResults(false)
+  }
 
   const handleDropdownToggle = (menu: string) => {
     setActiveDropdown(activeDropdown === menu ? null : menu)
@@ -81,7 +119,7 @@ const Navbar: FC = () => {
           '/ectd-ai',
           '/video-creation-service',
           '/live-lms',
-          '/compliance-loop'
+          '/complianceloop'
         ]
         const isCurrentSolutionPage = solutionPages.includes(currentPath)
         const isNavigatingToSolutionPage = solutionPages.includes(href)
@@ -176,6 +214,56 @@ const Navbar: FC = () => {
         </button>
 
         <div className={`navbar-menu ${isMenuOpen ? 'active' : ''}`}>
+          {/* Global Search - always visible */}
+          <div className="navbar-search" ref={searchRef}>
+            <div className="search-input-container always-visible">
+              <div className="search-input-wrapper">
+                <svg className="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  className="navbar-search-input"
+                  value={searchQuery}
+                  onChange={(e) => handleSearch(e.target.value)}
+                  onFocus={() => searchQuery.trim().length >= 2 && setShowSearchResults(true)}
+                />
+                {searchQuery && (
+                  <button className="search-clear-btn" onClick={clearSearch} title="Clear search">
+                    ✕
+                  </button>
+                )}
+              </div>
+              
+              {showSearchResults && searchResults.length > 0 && (
+                <div className="search-results-dropdown">
+                  <div className="search-results-header">
+                    {searchResults.length} result{searchResults.length !== 1 ? 's' : ''} found
+                  </div>
+                  {searchResults.map((item) => (
+                    <div
+                      key={item.id}
+                      className="search-result-item"
+                      onClick={() => handleSearchSelect(item)}
+                    >
+                      <div className="search-result-category">{item.category}</div>
+                      <div className="search-result-title">{item.title}</div>
+                      <div className="search-result-description">{item.description}</div>
+                    </div>
+                  ))}
+                </div>
+              )}
+              
+              {showSearchResults && searchQuery.trim().length >= 2 && searchResults.length === 0 && (
+                <div className="search-results-dropdown">
+                  <div className="search-no-results">No results found</div>
+                </div>
+              )}
+            </div>
+          </div>
+
           <a 
             href="/" 
             className="nav-link"
@@ -255,21 +343,6 @@ const Navbar: FC = () => {
               }}
             >
               Contact Us
-            </a>
-            <a 
-              href="https://pharma.industryiceberg.com/"
-              className="nav-link signin-btn"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => {
-                trackButtonClick('Sign In', 'ii Sign In', { 
-                  location: 'navbar',
-                  external_link: true,
-                  destination: 'https://pharma.industryiceberg.com/'
-                })
-              }}
-            >
-              ii Sign In
             </a>
           </div>
         </div>

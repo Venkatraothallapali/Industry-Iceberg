@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 import { services, keyFeatures } from '../data/services'
 import { useCanonicalUrlWithPath } from '../../../../hooks/useCanonicalUrl'
 import type { Service } from '../types'
@@ -13,6 +13,12 @@ const typedKeyFeatures: string[] = keyFeatures as any;
 const Services: React.FC = () => {
   const servicesRef = useRef<HTMLDivElement>(null)
   const { serviceId } = useParams<{ serviceId?: string }>()
+  const navigate = useNavigate()
+  
+  // Handle service card click
+  const handleServiceClick = (serviceId: string) => {
+    navigate(`/complianceloop/services/${serviceId}`)
+  }
   
   // Set canonical URL for services page
   useCanonicalUrlWithPath('/complianceloop/services')
@@ -76,7 +82,15 @@ const Services: React.FC = () => {
       <div className="container">
         <div className="services-list-container" ref={servicesRef}>
             {typedServices.map((service: Service, index: number) => (
-              <div key={service.id} id={service.id} className="service-card">
+              <div 
+                key={service.id} 
+                id={service.id} 
+                className="service-card clickable"
+                onClick={() => handleServiceClick(service.id)}
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => e.key === 'Enter' && handleServiceClick(service.id)}
+              >
                 <div className="service-card-header">
                   <span className="service-number">{index + 1}</span>
                   <h2 className="service-title">{service.title}</h2>

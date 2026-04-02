@@ -92,7 +92,7 @@
   background: var(--bg-secondary);
 }
 
-.compliance-loop-navbar .nav-link {
+.complianceloop-navbar .nav-link {
   color: var(--text-primary);
   text-decoration: none;
   font-size: var(--font-size-base);
@@ -103,7 +103,7 @@
   position: relative;
 }
 
-.compliance-loop-navbar .nav-link::after {
+.complianceloop-navbar .nav-link::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -115,18 +115,50 @@
   transform: translateX(-50%);
 }
 
-.compliance-loop-navbar .nav-link:hover::after,
-.compliance-loop-navbar .nav-link.active::after {
+.complianceloop-navbar .nav-link:hover::after,
+.complianceloop-navbar .nav-link.active::after {
   width: 80%;
 }
 
-.compliance-loop-navbar .nav-link:hover {
+.complianceloop-navbar .nav-link:hover {
   color: var(--primary-color);
 }
 
-.compliance-loop-navbar .nav-link.active {
+.complianceloop-navbar .nav-link.active {
   color: var(--primary-color);
   font-weight: 600;
+}
+
+/* Sign In CTA Button */
+.sign-in-cta {
+  background-color: #1e82c9 !important;
+  padding: 0.5rem 1.5rem;
+  color: white !important;
+  border-radius: 2rem;
+  transition: all 0.2s ease;
+  font-weight: 600;
+  border: 1px solid #1e82c9;
+}
+
+.sign-in-cta:hover {
+  background-color: #166ba8;
+  border-color: #166ba8;
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.sign-in-cta::after {
+  display: none !important;
+}
+
+/* Mobile adjustments for Sign In CTA */
+@media (max-width: 768px) {
+  .sign-in-cta {
+    display: inline-block;
+    width: auto;
+    margin: 0.5rem auto;
+  }
 }
 
 /* Sign In Button */
@@ -221,7 +253,7 @@
     visibility: visible;
   }
 
-  .compliance-loop-navbar .nav-link {
+  .complianceloop-navbar .nav-link {
     width: 100%;
     text-align: center;
     padding: var(--spacing-sm);
@@ -239,7 +271,7 @@
     display: block;
   }
 
-  .compliance-loop-navbar .nav-link::after {
+  .complianceloop-navbar .nav-link::after {
     display: none;
   }
 

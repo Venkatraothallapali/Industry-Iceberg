@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { addStructuredData, createOrganizationData, createWebsiteData, createBreadcrumbData, createServiceData } from '../utils/structuredData'
 
+const DEFAULT_OG_IMAGE = 'https://www.industryiceberg.com/assets/logo-cdoxsd3z.png'
 const GA_TRACKING_ID = 'G-SMN2K1HHVV'
 
 interface ProductMetaConfig {
@@ -10,12 +11,14 @@ interface ProductMetaConfig {
   keywords: string
   ogTitle?: string
   ogDescription?: string
+  ogImage?: string
   twitterTitle?: string
   twitterDescription?: string
+  twitterImage?: string
 }
 
 const productMetaConfigs: Record<string, ProductMetaConfig> = {
-  'compliance-loop': {
+  'complianceloop': {
     title: 'Compliance Loop: AI Platform for Life Sciences | Industry Iceberg',
     description: 'IndustryIceberg\'s Compliance Loop helps life sciences companies find compliant partners, streamline workflows, and ensure regulatory excellence.',
     keywords: 'Compliance Loop, AI platform for life sciences, compliant partner discovery, pharma AI solutions, CMO CRO services, regulatory compliance AI',
@@ -88,36 +91,36 @@ const productMetaConfigs: Record<string, ProductMetaConfig> = {
     twitterDescription: 'Connect multiple data sources to your regulatory documents. Import data from databases, files, and systems directly into VeritaScribe.'
   },
   'complisense-dashboard': {
-    title: 'cGMP Intelligence Dashboard | CompliSense | Industry Iceberg',
-    description: 'View real-time FDA 483 insights, GMP trends, and compliance analytics on the CompliSense dashboard. Make data-driven compliance decisions.',
-    keywords: 'cGMP dashboard, compliance dashboard, FDA 483 analytics, GMP intelligence dashboard, regulatory analytics, compliance monitoring dashboard',
-    ogTitle: 'cGMP Intelligence Dashboard | CompliSense | Industry Iceberg',
-    ogDescription: 'View real-time FDA 483 insights, GMP trends, and compliance analytics on the CompliSense dashboard. Make data-driven compliance decisions.',
-    twitterTitle: 'cGMP Intelligence Dashboard | CompliSense | Industry Iceberg',
-    twitterDescription: 'View real-time FDA 483 insights, GMP trends, and compliance analytics on the CompliSense dashboard. Make data-driven compliance decisions.'
+    title: 'CompliSense: cGMP Intelligence Platform | Industry Iceberg AI',
+    description: 'CompliSense by IndustryIceberg provides real-time FDA 483 insights, GMP trend analysis and actionable intelligence for compliant life sciences operations.',
+    keywords: 'cGMP Intelligence platform, CompliSense, FDA 483 analysis, GMP inspection trends, life sciences compliance, pharma regulatory intelligence, quality system insights',
+    ogTitle: 'CompliSense: cGMP Intelligence Platform | Industry Iceberg AI',
+    ogDescription: 'CompliSense by IndustryIceberg provides real-time FDA 483 insights, GMP trend analysis and actionable intelligence for compliant life sciences operations.',
+    twitterTitle: 'CompliSense: cGMP Intelligence Platform | Industry Iceberg AI',
+    twitterDescription: 'CompliSense by IndustryIceberg provides real-time FDA 483 insights, GMP trend analysis and actionable intelligence for compliant life sciences operations.'
   },
   'complisense-observation': {
-    title: 'FDA Observation Analysis | CompliSense | Industry Iceberg',
-    description: 'Analyze FDA Form 483 observations with AI-powered insights. Identify trends, root causes, and corrective actions with CompliSense.',
-    keywords: 'FDA observation analysis, Form 483 analysis, inspection observation trends, regulatory observation insights, compliance issue analysis',
-    ogTitle: 'FDA Observation Analysis | CompliSense | Industry Iceberg',
-    ogDescription: 'Analyze FDA Form 483 observations with AI-powered insights. Identify trends, root causes, and corrective actions with CompliSense.',
-    twitterTitle: 'FDA Observation Analysis | CompliSense | Industry Iceberg',
-    twitterDescription: 'Analyze FDA Form 483 observations with AI-powered insights. Identify trends, root causes, and corrective actions with CompliSense.'
+    title: 'Observation Analysis & CFR Mapping | IndustryIceberg AI',
+    description: 'Analyze FDA 483 observations, map them to relevant CFRs, track historical patterns, and get AI-driven CAPA recommendations with IndustryIceberg.',
+    keywords: 'FDA 483 observation analysis, CFR mapping, CAPA recommendations, compliance tracking, GMP observation insights, life sciences regulatory AI, IndustryIceberg',
+    ogTitle: 'Observation Analysis & CFR Mapping | IndustryIceberg AI',
+    ogDescription: 'Analyze FDA 483 observations, map them to relevant CFRs, track historical patterns, and get AI-driven CAPA recommendations with IndustryIceberg.',
+    twitterTitle: 'Observation Analysis & CFR Mapping | IndustryIceberg AI',
+    twitterDescription: 'Analyze FDA 483 observations, map them to relevant CFRs, track historical patterns, and get AI-driven CAPA recommendations with IndustryIceberg.'
   }
 }
 
 const serviceMetaConfigs: Record<string, ProductMetaConfig> = {
-  'CMO': {
-    title: 'Find Compliant Contract Manufacturing Organizations (CMOs) Quickly',
+  'cmo': {
+    title: 'Find Compliant Contract Manufacturing Organizations  (CMOs) Quickly',
     description: 'IndustryIceberg AI helps life sciences teams find capable, compliant Contract Manufacturing Organizations quickly, with real-time data, certifications, and audit-ready partners.',
     keywords: 'Contract Manufacturing Organizations, CMO discovery, pharma CMO AI, compliant CMOs, API manufacturing, drug product manufacturing, biologics CMO',
-    ogTitle: 'Find Compliant Contract Manufacturing Organizations (CMOs) Quickly',
+    ogTitle: 'Find Compliant Contract Manufacturing Organizations  (CMOs) Quickly',
     ogDescription: 'IndustryIceberg AI helps life sciences teams find capable, compliant Contract Manufacturing Organizations quickly, with real-time data, certifications, and audit-ready partners.',
-    twitterTitle: 'Find Compliant Contract Manufacturing Organizations (CMOs) Quickly',
+    twitterTitle: 'Find Compliant Contract Manufacturing Organizations  (CMOs) Quickly',
     twitterDescription: 'IndustryIceberg AI helps life sciences teams find capable, compliant Contract Manufacturing Organizations quickly, with real-time data, certifications, and audit-ready partners.'
   },
-  'CDMO': {
+  'cdmo': {
     title: 'Find Compliant Contract Development & Manufacturing Organizations (CDMOs)',
     description: 'IndustryIceberg AI helps life sciences teams discover compliant Contract Development & Manufacturing Organizations offering formulation, scale-up, and full lifecycle manufacturing support.',
     keywords: 'Contract Development & Manufacturing Organizations, CDMO discovery, pharma CDMO AI, compliant CDMOs, API CDMO, drug product CDMO, biologics CDMO',
@@ -126,7 +129,7 @@ const serviceMetaConfigs: Record<string, ProductMetaConfig> = {
     twitterTitle: 'Find Compliant Contract Development & Manufacturing Organizations (CDMOs)',
     twitterDescription: 'IndustryIceberg AI helps life sciences teams discover compliant Contract Development & Manufacturing Organizations offering formulation, scale-up, and full lifecycle manufacturing support.'
   },
-  'CROs': {
+  'cro': {
     title: 'Discover Compliant Contract Research Organizations (CROs) | Industry Iceberg AI Platform',
     description: 'IndustryIceberg AI helps life sciences teams find qualified, compliant Contract Research Organizations with real-time data, trial support and actionable insights.',
     keywords: 'Contract Research Organizations, CRO discovery, pharma CRO AI, compliant CROs, clinical trial CRO, regulatory support CRO, biostatistics CRO',
@@ -135,7 +138,7 @@ const serviceMetaConfigs: Record<string, ProductMetaConfig> = {
     twitterTitle: 'Discover Compliant Contract Research Organizations (CROs) | Industry Iceberg AI Platform',
     twitterDescription: 'IndustryIceberg AI helps life sciences teams find qualified, compliant Contract Research Organizations with real-time data, trial support and actionable insights.'
   },
-  'pre-clinical': {
+  'preclinical': {
     title: 'Find Compliant Pre Clinical Services for Pharma | Industry Iceberg AI Platform',
     description: 'IndustryIceberg AI helps life sciences teams find expert pre-clinical labs, access real-time data, and ensure GLP-compliant drug development.',
     keywords: 'Pre-Clinical Services, preclinical labs, GLP compliance, toxicology studies, pharmacokinetics PK, pharmacodynamics PD, early drug development, pharma AI',
@@ -163,12 +166,12 @@ const serviceMetaConfigs: Record<string, ProductMetaConfig> = {
     twitterDescription: 'IndustryIceberg AI helps pharma teams find compliant analytical testing labs, ensuring quality, stability, and regulatory-ready products.'
   },
   'stability-warehouse': {
-    title: 'Find Compliant Stability and Warehouse Partners | Industry Iceberg AI Platform',
+    title: ' Find Compliant Stability and Warehouse Partners | Industry Iceberg AI Platform',
     description: 'IndustryIceberg AI helps pharma teams find compliant stability and warehouse partners, ensuring product quality, safety, and regulatory compliance.',
     keywords: 'Stability & Warehousing, pharma storage solutions, cold chain storage, controlled room temperature storage, regulatory-compliant warehousing, stability testing services, temperature monitoring labs',
-    ogTitle: 'Find Compliant Stability and Warehouse Partners | Industry Iceberg AI Platform',
+    ogTitle: ' Find Compliant Stability and Warehouse Partners | Industry Iceberg AI Platform',
     ogDescription: 'IndustryIceberg AI helps pharma teams find compliant stability and warehouse partners, ensuring product quality, safety, and regulatory compliance.',
-    twitterTitle: 'Find Compliant Stability and Warehouse Partners | Industry Iceberg AI Platform',
+    twitterTitle: ' Find Compliant Stability and Warehouse Partners | Industry Iceberg AI Platform',
     twitterDescription: 'IndustryIceberg AI helps pharma teams find compliant stability and warehouse partners, ensuring product quality, safety, and regulatory compliance.'
   }
 }
@@ -285,6 +288,28 @@ export const useProductPageMeta = () => {
         ogUrl.setAttribute("content", `https://industryiceberg.com${pathname}`)
       }
 
+      // Update og:image
+      let ogImage = document.querySelector("meta[property='og:image']")
+      if (!ogImage) {
+        ogImage = document.createElement('meta')
+        ogImage.setAttribute('property', 'og:image')
+        document.head.appendChild(ogImage)
+      }
+      if (ogImage) {
+        ogImage.setAttribute("content", metaConfig.ogImage || DEFAULT_OG_IMAGE)
+      }
+
+      // Update og:type
+      let ogType = document.querySelector("meta[property='og:type']")
+      if (!ogType) {
+        ogType = document.createElement('meta')
+        ogType.setAttribute('property', 'og:type')
+        document.head.appendChild(ogType)
+      }
+      if (ogType) {
+        ogType.setAttribute("content", "website")
+      }
+
       // Update Twitter tags
       const twitterTitle = document.querySelector("meta[name='twitter:title']")
       if (twitterTitle && metaConfig.twitterTitle) {
@@ -296,6 +321,28 @@ export const useProductPageMeta = () => {
         twitterDescription.setAttribute("content", metaConfig.twitterDescription)
       }
 
+      // Update twitter:image
+      let twitterImage = document.querySelector("meta[name='twitter:image']")
+      if (!twitterImage) {
+        twitterImage = document.createElement('meta')
+        twitterImage.setAttribute('name', 'twitter:image')
+        document.head.appendChild(twitterImage)
+      }
+      if (twitterImage) {
+        twitterImage.setAttribute("content", metaConfig.twitterImage || metaConfig.ogImage || DEFAULT_OG_IMAGE)
+      }
+
+      // Update twitter:card
+      let twitterCard = document.querySelector("meta[name='twitter:card']")
+      if (!twitterCard) {
+        twitterCard = document.createElement('meta')
+        twitterCard.setAttribute('name', 'twitter:card')
+        document.head.appendChild(twitterCard)
+      }
+      if (twitterCard) {
+        twitterCard.setAttribute("content", "summary_large_image")
+      }
+
       // Add structured data
       // Add organization data (only once)
       addStructuredData('organization', createOrganizationData())
@@ -304,7 +351,7 @@ export const useProductPageMeta = () => {
       addStructuredData('website', createWebsiteData())
 
       // Add service-specific structured data for service pages
-      if (pathname.includes('/compliance-loop/services/')) {
+      if (pathname.includes('/complianceloop/services/')) {
         const serviceMatch = pathname.match(/\/services\/([^/]+)/)
         if (serviceMatch) {
           const serviceName = serviceMatch[1]
@@ -324,7 +371,7 @@ export const useProductPageMeta = () => {
 
       // Add advanced schema markup for better search visibility
       // Skip Compliance Loop services as requested
-      if (pathname.includes('/compliance-loop/services/')) {
+      if (pathname.includes('/complianceloop/services/')) {
         // Services pages - no advanced schema as requested
         // Only basic structured data will be added
       } else {

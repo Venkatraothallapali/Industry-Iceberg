@@ -179,19 +179,6 @@ const AiModelDevelopment: FC = () => {
               <div className="ai-technologies-use-case-card">
                 <div className="ai-technologies-use-case-icon">
                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 9L12 4L21 9L12 14L3 9Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M7 12L3 14L12 19L21 14L17 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-                <h3 className="ai-technologies-use-case-title">Manufacturing & Industry 4.0</h3>
-                <p className="ai-technologies-use-case-description">
-                  Smart factories, predictive maintenance, and quality automation using integrated AI technologies for industrial transformation.
-                </p>
-              </div>
-
-              <div className="ai-technologies-use-case-card">
-                <div className="ai-technologies-use-case-icon">
-                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 8C9.23858 8 7 10.2386 7 13C7 15.7614 9.23858 18 12 18C14.7614 18 17 15.7614 17 13C17 10.2386 14.7614 8 12 8Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     <path d="M4 4H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     <path d="M4 20H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

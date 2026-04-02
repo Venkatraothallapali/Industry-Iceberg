@@ -93,7 +93,7 @@
   color: var(--text-secondary);
   line-height: 1.8;
   margin-bottom: var(--spacing-md);
-  text-align: left;
+  text-align: center;
 }
 
 .story-text strong {
@@ -183,7 +183,7 @@
   overflow-wrap: break-word;
 }
 
-.compliance-loop-home .content-card {
+.complianceloop-home .content-card {
   background: var(--bg-secondary);
   padding: var(--spacing-lg);
   border-radius: var(--radius-lg);
@@ -193,7 +193,7 @@
   border-color: var(--primary-color);
 }
 
-.compliance-loop-home .content-card h3 {
+.complianceloop-home .content-card h3 {
   font-size: 2.2rem;
   font-weight: 700;
   text-align: center;
@@ -201,7 +201,7 @@
   margin-bottom: var(--spacing-sm);
 }
 
-.compliance-loop-home .content-card p {
+.complianceloop-home .content-card p {
   color: var(--text-secondary);
   line-height: 1.8;
   font-size: var(--font-size-base);
@@ -251,7 +251,7 @@
   color: white;
 }
 
-.compliance-loop-footer-content {
+.complianceloop-footer-content {
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -276,27 +276,27 @@
   margin-bottom: var(--spacing-xs);
 }
 
-.compliance-loop-footer-logo {
+.complianceloop-footer-logo {
   height: 40px;
   width: auto;
   object-fit: contain;
 }
 
-.compliance-loop-footer-nav {
+.complianceloop-footer-nav {
   display: flex;
   gap: 30px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.compliance-loop-footer-link {
+.complianceloop-footer-link {
   color: white;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
-.compliance-loop-footer-link:hover {
+.complianceloop-footer-link:hover {
   color: #1e82c9;
 }
 

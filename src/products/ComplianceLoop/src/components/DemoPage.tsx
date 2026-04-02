@@ -48,7 +48,7 @@ const DemoPage: React.FC = () => {
     setIsSuccess(false);
 
     try {
-      await fetch('https://iidevgmpcomplianceai.azurewebsites.net/request-demo-compliance-loop', {
+      await fetch('https://iidevgmpcomplianceai.azurewebsites.net/request-demo-complianceloop', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

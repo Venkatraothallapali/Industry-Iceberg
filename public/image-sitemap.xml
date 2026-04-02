@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage Images -->
+  <url>
+    <loc>https://www.industryiceberg.com/</loc>
+    <image:image>
+      <image:loc>https://www.industryiceberg.com/assets/logo-cdoxsd3z.png</image:loc>
+      <image:title>Industry Iceberg - AI Platform for Life Sciences</image:title>
+      <image:caption>Industry Iceberg logo and branding</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.industryiceberg.com/assets/homepage_background_img.jpg</image:loc>
+      <image:title>Industry Iceberg Homepage Background</image:title>
+      <image:caption>AI-driven enterprise solutions for modern businesses</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Compliance Loop Images -->
+  <url>
+    <loc>https://www.industryiceberg.com/complianceloop</loc>
+    <image:image>
+      <image:loc>https://www.industryiceberg.com/assets/logo-cdoxsd3z.png</image:loc>
+      <image:title>Compliance Loop - AI Platform for Life Sciences</image:title>
+      <image:caption>Compliance Loop helps life sciences companies find compliant partners</image:caption>
+    </image:image>
+  </url>
+
+  <!-- CompliSense Images -->
+  <url>
+    <loc>https://www.industryiceberg.com/complisense</loc>
+    <image:image>
+      <image:loc>https://www.industryiceberg.com/assets/logo-cdoxsd3z.png</image:loc>
+      <image:title>CompliSense - cGMP Intelligence Platform</image:title>
+      <image:caption>CompliSense provides real-time FDA 483 insights and GMP analysis</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.industryiceberg.com/assets/complisense_background.jpg</image:loc>
+      <image:title>CompliSense Dashboard Background</image:title>
+      <image:caption>CompliSense regulatory intelligence dashboard</image:caption>
+    </image:image>
+  </url>
+
+  <!-- VeritaScribe Images -->
+  <url>
+    <loc>https://www.industryiceberg.com/veritascribe</loc>
+    <image:image>
+      <image:loc>https://www.industryiceberg.com/assets/logo-cdoxsd3z.png</image:loc>
+      <image:title>VeritaScribe - AI Document Automation</image:title>
+      <image:caption>VeritaScribe automates regulatory document drafting</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.industryiceberg.com/assets/AI%20Drafting%20Background_img.png</image:loc>
+      <image:title>AI Document Drafting Interface</image:title>
+      <image:caption>VeritaScribe AI-powered document creation</image:caption>
+    </image:image>
+  </url>
+
+  <!-- AI Model Development Images -->
+  <url>
+    <loc>https://www.industryiceberg.com/ai-model</loc>
+    <image:image>
+      <image:loc>https://www.industryiceberg.com/assets/ai_model_dev_background.png</image:loc>
+      <image:title>AI Model Development Background</image:title>
+      <image:caption>Enterprise AI model development and deployment</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Enterprise LLM Solutions Images -->
+  <url>
+    <loc>https://www.industryiceberg.com/enterprise-llm</loc>
+    <image:image>
+      <image:loc>https://www.industryiceberg.com/assets/Enterprise_LLM_Solutions.jpg</image:loc>
+      <image:title>Enterprise LLM Solutions</image:title>
+      <image:caption>Custom enterprise large language model solutions</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Video Creation Service Images -->
+  <url>
+    <loc>https://www.industryiceberg.com/videoservice-schedule</loc>
+    <image:image>
+      <image:loc>https://www.industryiceberg.com/assets/Video_Gen_Background_Img.png</image:loc>
+      <image:title>Video Generation Background</image:title>
+      <image:caption>AI-powered video content generation platform</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.industryiceberg.com/assets/Video_prod_BG_img.png</image:loc>
+      <image:title>Video Production Background</image:title>
+      <image:caption>Professional video production services</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Contact Page Images -->
+  <url>
+    <loc>https://www.industryiceberg.com/contact-us</loc>
+    <image:image>
+      <image:loc>https://www.industryiceberg.com/assets/Contact_us_background.png</image:loc>
+      <image:title>Contact Us Background</image:title>
+      <image:caption>Get in touch with Industry Iceberg team</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.industryiceberg.com/assets/contact-bottom-ii.png</image:loc>
+      <image:title>Contact Footer Image</image:title>
+      <image:caption>Industry Iceberg contact information</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Pharma Industry Images -->
+  <url>
+    <loc>https://www.industryiceberg.com/complianceloop/services/cmo</loc>
+    <image:image>
+      <image:loc>https://www.industryiceberg.com/assets/pharma_img.png</image:loc>
+      <image:title>Pharmaceutical Manufacturing</image:title>
+      <image:caption>CMO and CDMO services for pharma industry</image:caption>
+    </image:image>
+  </url>
+
+  <!-- LMS Images -->
+  <url>
+    <loc>https://www.industryiceberg.com/live-lms</loc>
+    <image:image>
+      <image:loc>https://www.industryiceberg.com/assets/lms_header_background.png</image:loc>
+      <image:title>LMS Header Background</image:title>
+      <image:caption>Learning Management System header</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.industryiceberg.com/assets/lms_footer_background.png</image:loc>
+      <image:title>LMS Footer Background</image:title>
+      <image:caption>Learning Management System footer</image:caption>
+    </image:image>
+  </url>
+
+</urlset>

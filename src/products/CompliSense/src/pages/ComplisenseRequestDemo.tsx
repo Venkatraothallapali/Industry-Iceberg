@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import logoImage from '../../../../assets/logo-cdoxsd3z.png';
 
 interface DemoFormData {
@@ -24,6 +25,7 @@ interface DemoFormErrors {
 }
 
 const RequestDemo = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState<DemoFormData>({
     name: '',
     workEmail: '',
@@ -113,7 +115,16 @@ const RequestDemo = () => {
       <nav className="demo-nav">
         <div className="demo-nav-container">
           <div className="demo-nav-brand">
-            <img src={logoImage} alt="Industry Iceberg CompliSense - AI-powered compliance management and regulatory automation platform" className="demo-nav-logo" />
+            <a 
+              href="/" 
+              onClick={(e) => {
+                e.preventDefault();
+                navigate('/');
+              }}
+              className="demo-nav-logo-link"
+            >
+              <img src={logoImage} alt="Industry Iceberg CompliSense - AI-powered compliance management and regulatory automation platform" className="demo-nav-logo" />
+            </a>
             <span className="demo-nav-title">CompliSense</span>
           </div>
         </div>

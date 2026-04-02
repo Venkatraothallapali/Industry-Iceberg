@@ -159,7 +159,7 @@ const Home: React.FC = () => {
               including:
             </p>
             <div className="services-grid">
-              <div className="service-preview-item">
+              <div className="service-preview-item clickable" onClick={() => navigate('/complianceloop/services/cmo')} role="button" tabIndex={0} onKeyDown={(e) => e.key === 'Enter' && navigate('/complianceloop/services/cmo')}>
                 <div className="service-icon">
                   <img
                     src={CMOIcon}
@@ -168,7 +168,7 @@ const Home: React.FC = () => {
                 </div>
                 <h4>Contract Manufacturing Organizations (CMO)</h4>
               </div>
-              <div className="service-preview-item">
+              <div className="service-preview-item clickable" onClick={() => navigate('/complianceloop/services/cro')} role="button" tabIndex={0} onKeyDown={(e) => e.key === 'Enter' && navigate('/complianceloop/services/cro')}>
                 <div className="service-icon">
                   <img
                     src={CROIcon}
@@ -177,7 +177,7 @@ const Home: React.FC = () => {
                 </div>
                 <h4>Contract Research Organizations (CROs)</h4>
               </div>
-              <div className="service-preview-item">
+              <div className="service-preview-item clickable" onClick={() => navigate('/complianceloop/services/preclinical')} role="button" tabIndex={0} onKeyDown={(e) => e.key === 'Enter' && navigate('/complianceloop/services/preclinical')}>
                 <div className="service-icon">
                   <img
                     src={PreClinicalIcon}
@@ -186,7 +186,7 @@ const Home: React.FC = () => {
                 </div>
                 <h4>Pre-Clinical</h4>
               </div>
-              <div className="service-preview-item">
+              <div className="service-preview-item clickable" onClick={() => navigate('/complianceloop/services/clinical')} role="button" tabIndex={0} onKeyDown={(e) => e.key === 'Enter' && navigate('/complianceloop/services/clinical')}>
                 <div className="service-icon">
                   <img
                     src={ClinicalIcon}
@@ -195,7 +195,7 @@ const Home: React.FC = () => {
                 </div>
                 <h4>Clinical</h4>
               </div>
-              <div className="service-preview-item">
+              <div className="service-preview-item clickable" onClick={() => navigate('/complianceloop/services/analytical-testing')} role="button" tabIndex={0} onKeyDown={(e) => e.key === 'Enter' && navigate('/complianceloop/services/analytical-testing')}>
                 <div className="service-icon">
                   <img
                     src={ATLIcon}
@@ -204,7 +204,7 @@ const Home: React.FC = () => {
                 </div>
                 <h4>Analytical Testing Lab (ATL)</h4>
               </div>
-              <div className="service-preview-item">
+              <div className="service-preview-item clickable" onClick={() => navigate('/complianceloop/services/stability-warehouse')} role="button" tabIndex={0} onKeyDown={(e) => e.key === 'Enter' && navigate('/complianceloop/services/stability-warehouse')}>
                 <div className="service-icon">
                   <img
                     src={StabilityIcon}
@@ -223,11 +223,11 @@ const Home: React.FC = () => {
 
         <footer className="home-footer">
 
-          <div className="compliance-loop-footer-content">
+          <div className="complianceloop-footer-content">
 
             <div className="footer-logo-section">
 
-              <img src={logoImage} alt="Industry Iceberg Compliance Loop - AI-driven regulatory compliance platform" className="compliance-loop-footer-logo" />
+              <img src={logoImage} alt="Industry Iceberg Compliance Loop - AI-driven regulatory compliance platform" className="complianceloop-footer-logo" />
 
               <div className="footer-brand">
 
@@ -237,9 +237,9 @@ const Home: React.FC = () => {
 
             </div>
 
-            <nav className="compliance-loop-footer-nav">
+            <nav className="complianceloop-footer-nav">
 
-              <a href="/complianceloop/services" className="compliance-loop-footer-link" onClick={(e) => {
+              <a href="/complianceloop/services" className="complianceloop-footer-link" onClick={(e) => {
 
                 e.preventDefault();
 
@@ -249,7 +249,7 @@ const Home: React.FC = () => {
 
               }}>Services</a>
 
-              <a href="/complianceloop/demo" className="compliance-loop-footer-link" onClick={(e) => {
+              <a href="/complianceloop/demo" className="complianceloop-footer-link" onClick={(e) => {
 
                 e.preventDefault();
 

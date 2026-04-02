@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import { DemoProvider } from "./context/DemoContext"
 import Landing from "./pages/Landing"
 import TemplateSelection from "./pages/TemplateSelection"
@@ -7,6 +7,7 @@ import ReviewPage from "./pages/ReviewPage"
 import VeritaScribeDemoWithSchema from "./pages/VeritaScribeDemoWithSchema"
 import AIDrafting from "./pages/AIDrafting"
 import DocumentPreview from "./pages/DocumentPreview"
+import NotFound from "../../../components/NotFound"
 import { ToastContainer } from "react-toastify"
 import "react-toastify/dist/ReactToastify.css"
 import "./styles/landing.css"
@@ -29,8 +30,8 @@ export default function App() {
           <Route path="drafting" element={<AIDrafting />} />
           <Route path="preview" element={<DocumentPreview />} />
 
-          {/* Redirect unknown routes */}
-          <Route path="*" element={<Navigate to="/" replace />} />
+          {/* Unknown Routes - Show 404 */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
 
         <ToastContainer

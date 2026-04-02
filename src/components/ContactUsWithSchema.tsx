@@ -9,13 +9,13 @@ const ContactUsWithSchema: FC = () => {
   useCanonicalUrlWithPath('/contact-us')
   
   usePageMetaManager({
-    title: "Contact Industry Iceberg | AI Solutions for Pharma",
-    description: "Contact Industry Iceberg to explore AI-powered solutions for pharmaceutical and life sciences industries. Get expert support for compliance, quality management, and digital transformation.",
-    keywords: "contact Industry Iceberg, pharma AI contact, life sciences consulting, regulatory compliance support, AI solutions inquiry, pharmaceutical technology consulting, compliance solutions contact",
-    ogTitle: "Contact Industry Iceberg | AI Solutions for Pharma",
-    ogDescription: "Contact Industry Iceberg to explore AI-powered solutions for pharmaceutical and life sciences industries. Get expert support for compliance, quality management, and digital transformation.",
-    twitterTitle: "Contact Industry Iceberg | AI Solutions for Pharma",
-    twitterDescription: "Contact Industry Iceberg to explore AI-powered solutions for pharmaceutical and life sciences industries. Get expert support for compliance, quality management, and digital transformation."
+    title: "Contact IndustryIceberg | AI Solutions for Pharma",
+    description: "Contact IndustryIceberg to explore AI-powered solutions for pharma, compliance, and enterprise transformation with expert support.",
+    keywords: "contact IndustryIceberg, pharma AI solutions contact, life sciences AI support, compliance solutions inquiry, enterprise AI services, pharma technology consulting",
+    ogTitle: "Contact IndustryIceberg | AI Solutions for Pharma",
+    ogDescription: "Contact IndustryIceberg to explore AI-powered solutions for pharma, compliance, and enterprise transformation with expert support.",
+    twitterTitle: "Contact IndustryIceberg | AI Solutions for Pharma",
+    twitterDescription: "Contact IndustryIceberg to explore AI-powered solutions for pharma, compliance, and enterprise transformation with expert support."
   })
 
   // Add comprehensive advanced schema markup

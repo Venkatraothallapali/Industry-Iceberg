@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
   }
 
   return (
-    <div className="compliance-loop-navbar">
+    <div className="complianceloop-navbar">
       <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
         <div className="nav-container">
 
@@ -111,13 +111,14 @@ const Navbar: React.FC = () => {
               </Link>
             </li>
 
-            {/* External Sign In */}
+            {/* Sign In CTA */}
             <li>
               <a
                 href="https://pharma.industryiceberg.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="nav-link sign-in-btn"
+                className="nav-link sign-in-cta"
+                onClick={() => setIsMobileMenuOpen(false)}
               >
                 Sign In
               </a>

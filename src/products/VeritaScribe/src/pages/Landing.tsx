@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { useCanonicalUrlWithPath } from '../../../../hooks/useCanonicalUrl'
+import { usePageMetaManager } from '../../../../hooks/usePageMetaManager'
 import './Landing.minimal.css'
 import imagePng from "../assets/image.png";
 import searchImg from "../assets/Search.png";
@@ -24,6 +25,17 @@ const Landing: React.FC = () => {
   
   // Set canonical URL for VeritaScribe landing page
   useCanonicalUrlWithPath('/veritascribe')
+
+  // Set meta tags for VeritaScribe page
+  usePageMetaManager({
+    title: "VeritaScribe: AI Document Automation | IndustryIceberg",
+    description: "VeritaScribe AI automates document drafting, ensures compliance, and accelerates workflow with summaries, edits, and smart collaboration tools.",
+    keywords: "AI document automation, VeritaScribe, document workflow AI, regulatory compliance documents, AI summarization, collaborative document editing, pharma document automation",
+    ogTitle: "VeritaScribe: AI Document Automation | IndustryIceberg",
+    ogDescription: "VeritaScribe AI automates document drafting, ensures compliance, and accelerates workflow with summaries, edits, and smart collaboration tools.",
+    twitterTitle: "VeritaScribe: AI Document Automation | IndustryIceberg",
+    twitterDescription: "VeritaScribe AI automates document drafting, ensures compliance, and accelerates workflow with summaries, edits, and smart collaboration tools."
+  })
 
   const features: Feature[] = [
     {

@@ -8,42 +8,58 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# Force WWW redirection
-RewriteCond %{HTTP_HOST} ^industryiceberg\.com [NC]
-RewriteRule ^(.*)$ https://www.industryiceberg.com/$1 [L,R=301]
+# Disable MultiViews to prevent Apache from guessing file paths
+Options -MultiViews
 
-# Remove trailing slashes (except for directories)
+# Don't apply rewrite rules to actual files or directories
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Compliance Loop Product Routes
+RewriteRule ^complianceloop/?$ /index.html [L]
+RewriteRule ^complianceloop/services/?$ /index.html [L]
+RewriteRule ^complianceloop/services/([^/]+)/?$ /index.html [L]
+RewriteRule ^complianceloop/demo/?$ /index.html [L]
+
+# VeritaScribe Product Routes
+RewriteRule ^veritascribe/?$ /index.html [L]
+RewriteRule ^veritascribe/templates/?$ /index.html [L]
+RewriteRule ^veritascribe/pricing/?$ /index.html [L]
+RewriteRule ^veritascribe/demo/?$ /index.html [L]
+
+# Complisense Product Routes
+RewriteRule ^complisense/?$ /index.html [L]
+RewriteRule ^complisense/services/?$ /index.html [L]
+RewriteRule ^complisense/services/([^/]+)/?$ /index.html [L]
+RewriteRule ^complisense/demo/?$ /index.html [L]
+
+# Remove trailing slashes and redirect
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} (.+)/$
-RewriteRule ^ %1 [L,R=301]
+RewriteRule ^(.*)/$ /$1 [R=301,L]
 
-# Service redirects (short URLs to full paths with uppercase)
-RewriteRule ^cmo/?$ /complianceloop/services/CMO [L,R=301]
-RewriteRule ^cdmo/?$ /complianceloop/services/CDMO [L,R=301]
-RewriteRule ^cro/?$ /complianceloop/services/CROs [L,R=301]
-RewriteRule ^preclinical/?$ /complianceloop/services/pre-clinical [L,R=301]
-RewriteRule ^analytical-testing/?$ /complianceloop/services/analytical-testing [L,R=301]
-RewriteRule ^stability/?$ /complianceloop/services/stability-warehouse [L,R=301]
+# SPA Fallback - Handle all other routes
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ /index.html [L]
 
-# Demo redirects
-RewriteRule ^demo/?$ /contact [L,R=301]
-RewriteRule ^schedule-demo/?$ /videoservice-schedule-demo [L,R=301]
-RewriteRule ^request-demo/?$ /contact [L,R=301]
+# 404 Error Document (only for actual 404s that aren't handled by rewrites)
+ErrorDocument 404 /404.html
 
 # Legacy page redirects (from old hyphenated URLs to new format)
 RewriteRule ^about-us/?$ /about [L,R=301]
 RewriteRule ^contact-us/?$ /contact [L,R=301]
 RewriteRule ^our-services/?$ /complianceloop/services [L,R=301]
-RewriteRule ^compliance-loop/?$ /complianceloop [L,R=301]
-RewriteRule ^compliance-loop/services/?$ /complianceloop/services [L,R=301]
-RewriteRule ^compliance-loop/demo/?$ /complianceloop/demo [L,R=301]
-RewriteRule ^compliance-loop/services/cmo/?$ /complianceloop/services/CMO [L,R=301]
-RewriteRule ^compliance-loop/services/cdmo/?$ /complianceloop/services/CDMO [L,R=301]
-RewriteRule ^compliance-loop/services/cro/?$ /complianceloop/services/CROs [L,R=301]
-RewriteRule ^compliance-loop/services/preclinical/?$ /complianceloop/services/pre-clinical [L,R=301]
+RewriteRule ^complianceloop/?$ /complianceloop [L,R=301]
+RewriteRule ^complianceloop/services/?$ /complianceloop/services [L,R=301]
+RewriteRule ^complianceloop/demo/?$ /complianceloop/demo [L,R=301]
+RewriteRule ^complianceloop/services/cmo/?$ /complianceloop/services/CMO [L,R=301]
+RewriteRule ^complianceloop/services/cdmo/?$ /complianceloop/services/CDMO [L,R=301]
+RewriteRule ^complianceloop/services/cro/?$ /complianceloop/services/CROs [L,R=301]
+RewriteRule ^complianceloop/services/preclinical/?$ /complianceloop/services/pre-clinical [L,R=301]
 
 # Custom error pages
-ErrorDocument 404 /index.html
+# 404 handled above with proper positioning
 
 # Handle React Router - redirect all requests to index.html
 # Except for actual files and directories that exist

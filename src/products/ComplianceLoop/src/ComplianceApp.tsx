@@ -1,9 +1,10 @@
-import { Routes, Route, Navigate } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import "./styles/index.css"
 
 import Home from "./components/Home"
 import Services from "./components/Services"
 import ComplianceLoopDemoWithSchema from "./components/ComplianceLoopDemoWithSchema"
+import NotFound from "../../../components/NotFound"
 import { useProductPageMeta } from "../../../hooks/useProductPageMeta"
 
 export default function ComplianceApp() {
@@ -11,7 +12,7 @@ export default function ComplianceApp() {
   useProductPageMeta()
   
   return (
-    <div className="compliance-loop-app">
+    <div className="complianceloop-app">
       <Routes>
         {/* Default Page */}
         <Route path="/" element={<Home />} />
@@ -26,8 +27,8 @@ export default function ComplianceApp() {
         <Route path="contact" element={<ComplianceLoopDemoWithSchema />} />
         <Route path="demo" element={<ComplianceLoopDemoWithSchema />} />
 
-        {/* Redirect Unknown Routes */}
-        <Route path="*" element={<Navigate to="/" replace />} />
+        {/* Unknown Routes - Show 404 */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   )

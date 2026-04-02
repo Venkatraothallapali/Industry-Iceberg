@@ -18,12 +18,12 @@ const WhoWeAre: FC = () => {
           <p>
             From regulatory compliance and quality systems to data-intensive workflows, we use AI to automate, analyze, and accelerate critical pharma operations, without compromising accuracy or compliance. Every solution we build is grounded in domain knowledge, engineered for complexity, and designed to deliver measurable impact.
           </p>
-          
-          <p className="description-outro">
-            At IndustryIceberg,<br />
-            we do not just apply AI to pharma problems. We use pharma intelligence to build AI that works.
-          </p>
         </div>
+        
+        <p className="description-outro">
+          At IndustryIceberg,<br />
+          we do not just apply AI to pharma problems. We use pharma intelligence to build AI that works.
+        </p>
       </div>
     </section>
   )
